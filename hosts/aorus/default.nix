@@ -32,6 +32,14 @@
   # The time zone used when displaying times and dates
   time.timeZone = "America/Sao_Paulo";
 
+  # Networking settings
+  networking = {
+    hostname = "aorus";
+    networkmanager = {
+      enable = true;
+    };
+  };
+
   # NixOS release
   system.stateVersion = "23.05";
 }
