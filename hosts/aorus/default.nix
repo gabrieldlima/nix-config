@@ -66,6 +66,12 @@
     };
   };
 
+  # The set of packages that is automatically available to all users
+  environment.systemPackages = with pkgs; [
+    git
+    vim
+  ];
+
   # NixOS release
   system.stateVersion = "23.05";
 }
