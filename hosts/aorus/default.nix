@@ -29,6 +29,8 @@
     };
   };
 
+  # The time zone used when displaying times and dates
+  time.timeZone = "America/Sao_Paulo";
 
   # NixOS release
   system.stateVersion = "23.05";
