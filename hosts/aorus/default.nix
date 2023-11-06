@@ -43,7 +43,7 @@
 
   # Networking settings
   networking = {
-    hostname = "aorus";
+    hostName = "aorus";
     networkmanager = {
       enable = true;
     };
