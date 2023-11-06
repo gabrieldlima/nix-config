@@ -29,6 +29,9 @@
     };
   };
 
+  # Bootloader
+  boot.loader.systemd-boot.enable = true;
+
   # The time zone used when displaying times and dates
   time.timeZone = "America/Sao_Paulo";
 
