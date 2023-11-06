@@ -21,6 +21,13 @@
     };
   };
 
+  # nixpkgs instance config
+  nixpkgs = {
+    config = {
+      # Always allow unfree packages
+      allowUnfree = true;
+    };
+
   # NixOS release
   system.stateVersion = "23.05";
 }
