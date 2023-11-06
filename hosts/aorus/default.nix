@@ -47,6 +47,10 @@
 	services.xserver.enable = true;
 	services.xserver.displayManager.startx.enable = true;
 
+  # Enable the Pulseaudio sound server
+	sound.enable = true;
+	hardware.pulseaudio.enable = true;
+
   # NixOS release
   system.stateVersion = "23.05";
 }
