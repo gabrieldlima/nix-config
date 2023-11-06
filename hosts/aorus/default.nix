@@ -1,4 +1,10 @@
-{ pkgs, inputs, lib, config, ... }: {
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -50,6 +56,15 @@
   # Enable the Pulseaudio sound server
 	sound.enable = true;
 	hardware.pulseaudio.enable = true;
+
+  # Additional user accounts to be created automatically by the system
+  users.users = {
+    gabriel = {
+      description = "Gabriel Lima";
+      isNormalUser = true;
+      extraGroups = [ "wheel" ];
+    };
+  };
 
   # NixOS release
   system.stateVersion = "23.05";
