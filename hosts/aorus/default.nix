@@ -72,6 +72,11 @@
     vim
   ];
 
+  # Fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
   # NixOS release
   system.stateVersion = "23.05";
 }
