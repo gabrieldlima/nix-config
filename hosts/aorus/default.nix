@@ -64,7 +64,7 @@
     gabriel = {
       description = "Gabriel Lima";
       isNormalUser = true;
-      extraGroups = [ "wheel" ];
+      extraGroups = [ "wheel" "libvirtd" ];
     };
   };
 
@@ -78,6 +78,10 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
+
+  # Virtualisation
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # NixOS release
   system.stateVersion = "23.05";
