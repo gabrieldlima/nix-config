@@ -42,6 +42,7 @@
       return {
         color_scheme = "catppuccinMocha",
         window_background_opacity = 0.95,
+        default_prog = { 'fish' },
       }
     '';
   };
