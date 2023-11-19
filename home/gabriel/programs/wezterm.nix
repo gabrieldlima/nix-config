@@ -45,6 +45,7 @@
         default_prog = { 'fish' },
         font = wezterm.font 'Fira Code Nerd Font',
         font_size = 12.0,
+        enable_tab_bar = false,
       }
     '';
   };
