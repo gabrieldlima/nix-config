@@ -9,6 +9,7 @@
     ./starship.nix
     ./fzf.nix
     ./eza.nix
+    ./bat.nix
   ];
   home.packages = with pkgs; [
     _1password-gui
