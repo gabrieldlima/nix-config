@@ -11,6 +11,11 @@
       enable = true;
       settings = {
         palette = "catppuccin_${flavour}";
+        add_newline = true;
+        character = {
+          success_symbol = "[](green)";
+          error_symbol = "[](red)";
+        };
       } // builtins.fromTOML (builtins.readFile
         (pkgs.fetchFromGitHub
           {
