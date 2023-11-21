@@ -18,7 +18,7 @@
         };
 
         # Nerd Font icons
-        aws.symbol = " ";
+        aws.symbol = "  ";
         buf.symbol = " ";
         c.symbol = " ";
         conda.symbol = " ";
@@ -28,6 +28,7 @@
         elixir.symbol = " ";
         elm.symbol = " ";
         fossil_branch.symbol = " ";
+        gcloud.symbol = " ";
         git_branch.symbol = " ";
         golang.symbol = " ";
         guix_shell.symbol = " ";
@@ -44,12 +45,16 @@
         nix_shell.symbol = " ";
         nodejs.symbol = " ";
         package.symbol = "󰏗 ";
+        perl.symbol = " ";
         pijul_channel.symbol = " ";
         python.symbol = " ";
         rlang.symbol = "󰟔 ";
         ruby.symbol = " ";
         rust.symbol = " ";
         scala.symbol = " ";
+        shlvl.symbol = "";
+        swift.symbol = "󰛥 ";
+        terraform.symbol = "󱁢";
       } // builtins.fromTOML (builtins.readFile
         (pkgs.fetchFromGitHub
           {
