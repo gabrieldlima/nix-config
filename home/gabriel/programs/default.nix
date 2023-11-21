@@ -12,6 +12,7 @@
   ];
   home.packages = with pkgs; [
     _1password-gui
+    fd
     eww
     firefox
     hello
