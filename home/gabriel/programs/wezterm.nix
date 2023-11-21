@@ -5,7 +5,8 @@
   programs.wezterm = {
     enable = true;
     colorSchemes = {
-      catppuccinMocha = { ansi = [
+      catppuccinMocha = {
+        ansi = [
           "#45475a"
           "#f38ba8"
           "#a6e3a1"

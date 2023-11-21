@@ -6,7 +6,7 @@
     enable = true;
     interactiveShellInit = "starship init fish | source";
     functions = {
-        fish_greeting = "";
+      fish_greeting = "";
     };
     plugins = [
       # Pure-fish z directory jumping
