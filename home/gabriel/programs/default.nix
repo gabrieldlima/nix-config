@@ -10,6 +10,7 @@
     ./fzf.nix
     ./eza.nix
     ./bat.nix
+    ./zathura.nix
   ];
   home.packages = with pkgs; [
     _1password-gui
