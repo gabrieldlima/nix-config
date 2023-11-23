@@ -83,6 +83,12 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+  # OpenRGB
+  services.hardware.openrgb = {
+    enable = true;
+    motherboard = "intel";
+  };
+
   # NixOS release
   system.stateVersion = "23.05";
 }
