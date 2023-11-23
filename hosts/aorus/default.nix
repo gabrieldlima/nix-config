@@ -89,6 +89,12 @@
     motherboard = "intel";
   };
 
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
   # NixOS release
   system.stateVersion = "23.05";
 }
