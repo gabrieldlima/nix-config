@@ -21,6 +21,7 @@
     neovim
     nitrogen
     picom
+    scrot
     rofi
   ];
 }
