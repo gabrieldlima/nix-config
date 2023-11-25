@@ -11,6 +11,7 @@
     ./eza.nix
     ./bat.nix
     ./zathura.nix
+    ./xmonad
   ];
   home.packages = with pkgs; [
     _1password-gui
