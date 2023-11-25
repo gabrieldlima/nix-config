@@ -10,7 +10,8 @@ main = xmonad $ def
     }
   `additionalKeysP`
     [
-      ("M-b", spawn "qutebrowser")     -- Browser
+      ("M-b", spawn "qutebrowser    ") -- Browser
     , ("M-p", spawn "rofi -show drun") -- Launcher
-    , ("M-<Return>", spawn "wezterm")  -- Terminal
+    , ("M-<Return>", spawn "wezterm" ) -- Terminal
+    , ("M-C-s", spawn "scrot -s"     ) -- Screenshot
     ]
