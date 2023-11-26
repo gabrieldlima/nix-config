@@ -58,8 +58,8 @@ myXmobarPP = def
     , ppHidden          = green . wrap "" ""                   -- how to print tags of hidden workspaces which contain windows
     , ppUrgent          = red . wrap (yellow "!") (yellow "!") -- format to be applied to tags of urgent workspaces
     , ppSep             = red " \xf0e7 "                       -- separator to use between different log sections
-    , ppTitle           = text . shorten 100
-    , ppTitleSanitize   = xmobarStrip
+    , ppTitle           = text . shorten 100                   -- window title format for the focused window
+    , ppTitleSanitize   = xmobarStrip                          -- escape / sanitizes input to ppTitle
     }
   where
     rosewater, flamingo, pink, mauve, red, marron, peach, yellow, green, teal, sky, sapphire, blue, lavender, text, base, surface2 :: String -> String
