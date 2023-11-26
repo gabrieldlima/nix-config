@@ -19,6 +19,7 @@ import XMonad.Layout.ThreeColumns -- Layout for arranging windows in three colum
 import XMonad.Util.EZConfig       -- Utility for easily configuring keybindings
 import XMonad.Util.Ungrab         -- Handles releasing keyboard and pointer grabs
 import XMonad.Util.Loggers
+import XMonad.Util.SpawnOnce      -- A module for spawning a command once, and only once
 
 main :: IO ()
 main = xmonad
@@ -32,8 +33,9 @@ main = xmonad
 
 myConfig = def
     {
-      modMask = mod4Mask    -- Rebind Mod to the Super Key
-    , layoutHook = myLayout -- Use custom layouts
+      modMask = mod4Mask          -- Rebind Mod to the Super Key
+    , layoutHook = myLayout       -- Use custom layouts
+    , startupHook = myStartupHook -- Autostart applications
     }
   `additionalKeysP`
     [
@@ -50,6 +52,15 @@ myLayout = tiled ||| Mirror tiled ||| threeCol ||| Full
     nmaster = 1     -- Default number of windows in the master pane
     ratio   = 1/2   -- Default proportion of screen occupied by master pane
     delta   = 3/100 -- Percent of screen to increment by when resizing panes
+
+myStartupHook :: X ()
+myStartupHook = do
+  spawnOnce "picom"                          -- Compositor
+  spawnOnce "nitrogen --restore"             -- Set a nice wallpaper
+  spawnOnce "xsetroot -cursor_name left_ptr" -- Set the default X cursor to the usual pointer
+  spawnOnce "xset s off -dpms"               -- Disable screen saver
+  spawnOnce "openrgb -d 0 -m off"            -- Turn off DIMM01 RGB leds
+  spawnOnce "openrgb -d 1 -m off"            -- Turn off DIMM02 RGB leds
 
 myXmobarPP :: PP
 myXmobarPP = def
