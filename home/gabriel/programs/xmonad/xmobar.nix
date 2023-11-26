@@ -32,10 +32,18 @@
                             , "--"
                             , "--scale", "1024"
                             ] 10
+                        , Run DiskU
+                            [("/", "<fc=#7dc4e4>󰆼 </fc><used>B")]
+                            [
+                              "--Low", "20"
+                            , "--High", "50"
+                            , "--minwidth", "1"
+                            , "--ppad", "3"
+                            ] 20
                         ]
            , sepChar  = "%"
            , alignSep = "}{"
-           , template = "%XMonadLog% }{ %cpu% | %memory% | %date% | %time%"
+           , template = "%XMonadLog% }{ %cpu% | %memory% | %disku% | %date% | %time%"
            }
     '';
   };
