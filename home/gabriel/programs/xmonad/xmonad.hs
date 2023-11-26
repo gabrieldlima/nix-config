@@ -13,8 +13,11 @@ import XMonad.Hooks.EwmhDesktops  -- Enhances XMonad's handling of EWMH hints an
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
+import XMonad.Hooks.ManageHelpers -- Provides helper functions to be used in manageHook
 
 import XMonad.Layout.ThreeColumns -- Layout for arranging windows in three columns
+
+import XMonad.ManageHook          -- An EDSL for ManageHooks
 
 import XMonad.Util.EZConfig       -- Utility for easily configuring keybindings
 import XMonad.Util.Ungrab         -- Handles releasing keyboard and pointer grabs
@@ -36,6 +39,7 @@ myConfig = def
       modMask = mod4Mask          -- Rebind Mod to the Super Key
     , layoutHook = myLayout       -- Use custom layouts
     , startupHook = myStartupHook -- Autostart applications
+    , manageHook = myManageHook   -- Match on certain windows
     }
   `additionalKeysP`
     [
@@ -52,6 +56,13 @@ myLayout = tiled ||| Mirror tiled ||| threeCol ||| Full
     nmaster = 1     -- Default number of windows in the master pane
     ratio   = 1/2   -- Default proportion of screen occupied by master pane
     delta   = 3/100 -- Percent of screen to increment by when resizing panes
+
+myManageHook :: ManageHook
+myManageHook = composeAll
+    [
+      isDialog --> doFloat
+      -- className =? "WM_CLASS(STRING)" --> doFloat
+    ]
 
 myStartupHook :: X ()
 myStartupHook = do
