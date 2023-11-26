@@ -52,8 +52,13 @@
   };
 
   # Enable the X11 windowing system
-	services.xserver.enable = true;
-	services.xserver.displayManager.startx.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager = {
+      startx.enable = true;
+    };
+    wacom.enable = true;
+  };
 
   # Enable the Pulseaudio sound server
 	sound.enable = true;
