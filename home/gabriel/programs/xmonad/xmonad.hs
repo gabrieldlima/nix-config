@@ -18,12 +18,13 @@ import XMonad.Layout.ThreeColumns -- Layout for arranging windows in three colum
 
 import XMonad.Util.EZConfig       -- Utility for easily configuring keybindings
 import XMonad.Util.Ungrab         -- Handles releasing keyboard and pointer grabs
+import XMonad.Util.Loggers
 
 main :: IO ()
 main = xmonad
      . ewmhFullscreen
      . ewmh
-     . withEasySB (statusBarProp "xmobar" (pure def)) toggleStrutsKey
+     . withEasySB (statusBarProp "xmobar" (pure myXmobarPP)) toggleStrutsKey
      $ myConfig
   where
     toggleStrutsKey :: XConfig Layout -> (KeyMask, KeySym)
@@ -49,3 +50,33 @@ myLayout = tiled ||| Mirror tiled ||| threeCol ||| Full
     nmaster = 1     -- Default number of windows in the master pane
     ratio   = 1/2   -- Default proportion of screen occupied by master pane
     delta   = 3/100 -- Percent of screen to increment by when resizing panes
+
+myXmobarPP :: PP
+myXmobarPP = def
+    {
+      ppCurrent         = peach . wrap "[" "]"                 -- how to print the tag of the currently focused workspace
+    , ppHidden          = green . wrap "" ""                   -- how to print tags of hidden workspaces which contain windows
+    , ppUrgent          = red . wrap (yellow "!") (yellow "!") -- format to be applied to tags of urgent workspaces
+    , ppSep             = red " \xf0e7 "                       -- separator to use between different log sections
+    , ppTitle           = text . shorten 100
+    , ppTitleSanitize   = xmobarStrip
+    }
+  where
+    rosewater, flamingo, pink, mauve, red, marron, peach, yellow, green, teal, sky, sapphire, blue, lavender, text, base, surface2 :: String -> String
+    rosewater = xmobarColor "#f5e0dc" ""
+    flamingo  = xmobarColor "#f2cdcd" ""
+    pink      = xmobarColor "#f5c2e7" ""
+    mauve     = xmobarColor "#cba6f7" ""
+    red       = xmobarColor "#f38ba8" ""
+    marron    = xmobarColor "#eba0ac" ""
+    peach     = xmobarColor "#fab387" ""
+    yellow    = xmobarColor "#f9e2af" ""
+    green     = xmobarColor "#a6e3a1" ""
+    teal      = xmobarColor "#94e2d5" ""
+    sky       = xmobarColor "#89dceb" ""
+    sapphire  = xmobarColor "#74c7ec" ""
+    blue      = xmobarColor "#89b4fa" ""
+    lavender  = xmobarColor "#b4befe" ""
+    text      = xmobarColor "#cdd6f4" ""
+    base      = xmobarColor "#050508" ""
+    surface2  = xmobarColor "#585b70" ""
