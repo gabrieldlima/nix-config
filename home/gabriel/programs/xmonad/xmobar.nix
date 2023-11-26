@@ -7,7 +7,7 @@
     extraConfig = ''
     Config {
              overrideRedirect = False
-           , font     = "Vanilla Caramel Regular 12"
+           , font     = "Sugar Snow Regular 11"
            , bgColor  = "#050508"
            , fgColor  = "#cdd6f4"
            , position = TopW L 100
