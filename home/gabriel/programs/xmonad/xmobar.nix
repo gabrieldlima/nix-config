@@ -40,10 +40,14 @@
                             , "--minwidth", "1"
                             , "--ppad", "3"
                             ] 20
+                        , Run Network "wlo1"
+                            [
+                              "--template", "<fc=#a6e3a1>󰖩 </fc><rx>KB/s"
+                            ] 10
                         ]
            , sepChar  = "%"
            , alignSep = "}{"
-           , template = "%XMonadLog% }{ %cpu% | %memory% | %disku% | %date% | %time%"
+           , template = "%XMonadLog% }{ %cpu% | %memory% | %disku% | %wlo1% | %date% | %time%"
            }
     '';
   };
