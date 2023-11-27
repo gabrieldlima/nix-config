@@ -6,7 +6,7 @@
     enable = true;
     extraConfig = ''
     Config {
-             font     = "Sugar Snow Regular 11"
+             font     = "Vanilla Caramel Regular 12"
            , bgColor  = "#050508"
            , fgColor  = "#cdd6f4"
            , alpha    = 255
