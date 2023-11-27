@@ -44,10 +44,14 @@
                             [
                               "--template", "<fc=#a6e3a1>󰖩 </fc><rx>KB/s"
                             ] 10
+                        , Run Volume "default" "Master"
+                            [
+                              "--template", "<fc=#89b4fa>󰕾 </fc><volume>%"
+                            ] 10
                         ]
            , sepChar  = "%"
            , alignSep = "}{"
-           , template = "%XMonadLog% }{ %cpu% | %memory% | %disku% | %wlo1% | %date% | %time%"
+           , template = "%XMonadLog% }{ %cpu% | %memory% | %disku% | %wlo1% | %default:Master% | %date% | %time%"
            }
     '';
   };
