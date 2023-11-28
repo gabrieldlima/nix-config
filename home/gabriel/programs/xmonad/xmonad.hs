@@ -11,11 +11,13 @@ import XMonad                     -- Core XMonad module
 
 import XMonad.Hooks.EwmhDesktops  -- Enhances XMonad's handling of EWMH hints and full-screen support
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.StatusBar
-import XMonad.Hooks.StatusBar.PP
+import XMonad.Hooks.StatusBar     -- Composable and dynamic status bars
+import XMonad.Hooks.StatusBar.PP  -- The pretty-printing abstraction for handling status bars
 import XMonad.Hooks.ManageHelpers -- Provides helper functions to be used in manageHook
 
 import XMonad.Layout.ThreeColumns -- Layout for arranging windows in three columns
+import XMonad.Layout.Spacing      -- Add a configurable amount of space around windows
+import XMonad.Layout.Renamed      -- Modify the description of a layout in a flexible way
 
 import XMonad.ManageHook          -- An EDSL for ManageHooks
 
@@ -49,7 +51,8 @@ myConfig = def
     , ("M-C-s",      spawn "scrot -s")        -- Screenshot
     ]
 
-myLayout = tiled ||| Mirror tiled ||| threeCol ||| Full
+myLayout = renamed [CutWordsLeft 1] $ spacingRaw False (Border 5 5 5 5) True (Border 5 5 5 5) True
+    $ tiled ||| Mirror tiled ||| threeCol ||| Full
   where
     threeCol = ThreeColMid nmaster delta ratio
     tiled   = Tall nmaster delta ratio
