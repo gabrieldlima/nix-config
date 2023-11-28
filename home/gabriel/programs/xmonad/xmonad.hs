@@ -42,6 +42,9 @@ myConfig = def
     , layoutHook = myLayout       -- Use custom layouts
     , startupHook = myStartupHook -- Autostart applications
     , manageHook = myManageHook   -- Match on certain windows
+    , borderWidth = myBorderWidth
+    , normalBorderColor = myNormalBorderColor
+    , focusedBorderColor = myFocusedBorderColor
     }
   `additionalKeysP`
     [
@@ -105,3 +108,7 @@ myXmobarPP = def
     text      = xmobarColor "#cdd6f4" ""
     base      = xmobarColor "#050508" ""
     surface2  = xmobarColor "#585b70" ""
+
+myBorderWidth = 1
+myNormalBorderColor = "#050508"
+myFocusedBorderColor = "#fab387"
