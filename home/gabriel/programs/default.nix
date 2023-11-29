@@ -12,6 +12,7 @@
     ./bat.nix
     ./zathura.nix
     ./xmonad
+    ./picom.nix
   ];
   home.packages = with pkgs; [
     _1password-gui
@@ -20,7 +21,6 @@
     hello
     neovim
     nitrogen
-    picom
     scrot
     rofi
   ];
