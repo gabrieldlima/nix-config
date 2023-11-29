@@ -3,16 +3,16 @@
   ...
 }: {
   imports = [
-    ./git.nix
-    ./wezterm.nix
-    ./fish.nix
-    ./starship.nix
-    ./fzf.nix
-    ./eza.nix
     ./bat.nix
-    ./zathura.nix
-    ./xmonad
+    ./eza.nix
+    ./fish.nix
+    ./fzf.nix
+    ./git.nix
     ./picom.nix
+    ./starship.nix
+    ./wezterm.nix
+    ./xmonad
+    ./zathura.nix
   ];
   home.packages = with pkgs; [
     _1password-gui
