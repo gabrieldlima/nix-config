@@ -10,7 +10,7 @@
 import XMonad                     -- Core XMonad module
 
 import XMonad.Hooks.EwmhDesktops  -- Enhances XMonad's handling of EWMH hints and full-screen support
-import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.DynamicLog    -- Send information about xmonad's state to an X11 property or standard output
 import XMonad.Hooks.StatusBar     -- Composable and dynamic status bars
 import XMonad.Hooks.StatusBar.PP  -- The pretty-printing abstraction for handling status bars
 import XMonad.Hooks.ManageHelpers -- Provides helper functions to be used in manageHook
@@ -38,13 +38,13 @@ main = xmonad
 
 myConfig = def
     {
-      modMask = mod4Mask          -- Rebind Mod to the Super Key
-    , layoutHook = myLayout       -- Use custom layouts
-    , startupHook = myStartupHook -- Autostart applications
-    , manageHook = myManageHook   -- Match on certain windows
-    , borderWidth = myBorderWidth
-    , normalBorderColor = myNormalBorderColor
-    , focusedBorderColor = myFocusedBorderColor
+      modMask            = mod4Mask              -- Rebind Mod to the Super Key
+    , layoutHook         = myLayout              -- Use custom layouts
+    , startupHook        = myStartupHook         -- Autostart applications
+    , manageHook         = myManageHook          -- Match on certain windows
+    , borderWidth        = myBorderWidth         -- Border width
+    , normalBorderColor  = myNormalBorderColor   -- Normal border color
+    , focusedBorderColor = myFocusedBorderColor  -- Focused border color
     }
   `additionalKeysP`
     [
