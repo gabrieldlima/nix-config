@@ -21,7 +21,7 @@
     hello
     neovim
     nitrogen
-    scrot
     rofi
+    scrot
   ];
 }
