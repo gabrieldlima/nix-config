@@ -18,7 +18,6 @@
     _1password-gui
     fd
     firefox
-    hello
     neovim
     nitrogen
     rofi
