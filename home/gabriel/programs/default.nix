@@ -20,6 +20,7 @@
     firefox
     neovim
     nitrogen
+    obsidian
     rofi
     scrot
   ];
