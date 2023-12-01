@@ -55,7 +55,7 @@ myKeys =
     , ("M-C-s",      spawn myScreenshot) -- Launch scrot
     ]
 
-myLayout = renamed [CutWordsLeft 1] $ spacingRaw False (Border 5 5 5 5) True (Border 5 5 5 5) True
+myLayoutHook = renamed [CutWordsLeft 1] $ spacingRaw False (Border 5 5 5 5) True (Border 5 5 5 5) True
     $ tiled ||| Mirror tiled ||| threeCol ||| Full
   where
     threeCol = ThreeColMid nmaster delta ratio
@@ -105,7 +105,7 @@ myXmobarPP = def
 myConfig = def
     {
       modMask            = mod4Mask              -- Rebind Mod to the Super Key
-    , layoutHook         = myLayout              -- Use custom layouts
+    , layoutHook         = myLayoutHook          -- Use custom layouts
     , startupHook        = myStartupHook         -- Autostart applications
     , manageHook         = myManageHook          -- Match on certain windows
     , borderWidth        = myBorderWidth         -- Border width
