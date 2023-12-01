@@ -27,25 +27,33 @@ import XMonad.Util.Ungrab         -- Handles releasing keyboard and pointer grab
 import XMonad.Util.Loggers
 import XMonad.Util.SpawnOnce      -- A module for spawning a command once, and only once
 
+-- Programs
+myTerminal   = "wezterm"
+myBrowser    = "qutebrowser"
+myLauncher   = "rofi -show drun"
+myScreenshot = "scrot -s"
+
+-- Border
+myBorderWidth        = 1
+myNormalBorderColor  = "#050508"
+myFocusedBorderColor = "#fab387"
+
+myStartupHook :: X ()
+myStartupHook = do
+    spawnOnce "picom"                          -- Compositor
+    spawnOnce "nitrogen --restore"             -- Set a nice wallpaper
+    spawnOnce "xsetroot -cursor_name left_ptr" -- Set the default X cursor to the usual pointer
+    spawnOnce "xset s off -dpms"               -- Disable screen saver
+    spawnOnce "openrgb -d 0 -m off"            -- Turn off DIMM01 RGB leds
+    spawnOnce "openrgb -d 1 -m off"            -- Turn off DIMM02 RGB leds
+
 myKeys =
     [
-      ("M-b",        spawn "qutebrowser")     -- Browser
-    , ("M-p",        spawn "rofi -show drun") -- Launcher
-    , ("M-<Return>", spawn "wezterm")         -- Terminal
-    , ("M-C-s",      spawn "scrot -s")        -- Screenshot
+      ("M-b",        spawn myBrowser)    -- Launch browser
+    , ("M-p",        spawn myLauncher)   -- Launch rofi launcher
+    , ("M-<Return>", spawn myTerminal)   -- Launch terminal
+    , ("M-C-s",      spawn myScreenshot) -- Launch scrot
     ]
-
-myConfig = def
-    {
-      modMask            = mod4Mask              -- Rebind Mod to the Super Key
-    , layoutHook         = myLayout              -- Use custom layouts
-    , startupHook        = myStartupHook         -- Autostart applications
-    , manageHook         = myManageHook          -- Match on certain windows
-    , borderWidth        = myBorderWidth         -- Border width
-    , normalBorderColor  = myNormalBorderColor   -- Normal border color
-    , focusedBorderColor = myFocusedBorderColor  -- Focused border color
-    }
-  `additionalKeysP` myKeys
 
 myLayout = renamed [CutWordsLeft 1] $ spacingRaw False (Border 5 5 5 5) True (Border 5 5 5 5) True
     $ tiled ||| Mirror tiled ||| threeCol ||| Full
@@ -62,15 +70,6 @@ myManageHook = composeAll
       isDialog --> doFloat
       -- className =? "WM_CLASS(STRING)" --> doFloat
     ]
-
-myStartupHook :: X ()
-myStartupHook = do
-  spawnOnce "picom"                          -- Compositor
-  spawnOnce "nitrogen --restore"             -- Set a nice wallpaper
-  spawnOnce "xsetroot -cursor_name left_ptr" -- Set the default X cursor to the usual pointer
-  spawnOnce "xset s off -dpms"               -- Disable screen saver
-  spawnOnce "openrgb -d 0 -m off"            -- Turn off DIMM01 RGB leds
-  spawnOnce "openrgb -d 1 -m off"            -- Turn off DIMM02 RGB leds
 
 myXmobarPP :: PP
 myXmobarPP = def
@@ -102,9 +101,18 @@ myXmobarPP = def
     base      = xmobarColor "#050508" ""
     surface2  = xmobarColor "#585b70" ""
 
-myBorderWidth = 1
-myNormalBorderColor = "#050508"
-myFocusedBorderColor = "#fab387"
+
+myConfig = def
+    {
+      modMask            = mod4Mask              -- Rebind Mod to the Super Key
+    , layoutHook         = myLayout              -- Use custom layouts
+    , startupHook        = myStartupHook         -- Autostart applications
+    , manageHook         = myManageHook          -- Match on certain windows
+    , borderWidth        = myBorderWidth         -- Border width
+    , normalBorderColor  = myNormalBorderColor   -- Normal border color
+    , focusedBorderColor = myFocusedBorderColor  -- Focused border color
+    }
+  `additionalKeysP` myKeys
 
 main :: IO ()
 main = xmonad
