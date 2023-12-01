@@ -27,16 +27,13 @@ import XMonad.Util.Ungrab         -- Handles releasing keyboard and pointer grab
 import XMonad.Util.Loggers
 import XMonad.Util.SpawnOnce      -- A module for spawning a command once, and only once
 
-main :: IO ()
-main = xmonad
-     . ewmhFullscreen
-     . ewmh
-     . fullscreenSupportBorder
-     . withEasySB (statusBarProp "xmobar" (pure myXmobarPP)) toggleStrutsKey
-     $ myConfig
-  where
-    toggleStrutsKey :: XConfig Layout -> (KeyMask, KeySym)
-    toggleStrutsKey XConfig{ modMask = m } = (m, xK_s)
+myKeys =
+    [
+      ("M-b",        spawn "qutebrowser")     -- Browser
+    , ("M-p",        spawn "rofi -show drun") -- Launcher
+    , ("M-<Return>", spawn "wezterm")         -- Terminal
+    , ("M-C-s",      spawn "scrot -s")        -- Screenshot
+    ]
 
 myConfig = def
     {
@@ -48,13 +45,7 @@ myConfig = def
     , normalBorderColor  = myNormalBorderColor   -- Normal border color
     , focusedBorderColor = myFocusedBorderColor  -- Focused border color
     }
-  `additionalKeysP`
-    [
-      ("M-b",        spawn "qutebrowser")     -- Browser
-    , ("M-p",        spawn "rofi -show drun") -- Launcher
-    , ("M-<Return>", spawn "wezterm")         -- Terminal
-    , ("M-C-s",      spawn "scrot -s")        -- Screenshot
-    ]
+  `additionalKeysP` myKeys
 
 myLayout = renamed [CutWordsLeft 1] $ spacingRaw False (Border 5 5 5 5) True (Border 5 5 5 5) True
     $ tiled ||| Mirror tiled ||| threeCol ||| Full
@@ -114,3 +105,14 @@ myXmobarPP = def
 myBorderWidth = 1
 myNormalBorderColor = "#050508"
 myFocusedBorderColor = "#fab387"
+
+main :: IO ()
+main = xmonad
+     . ewmhFullscreen
+     . ewmh
+     . fullscreenSupportBorder
+     . withEasySB (statusBarProp "xmobar" (pure myXmobarPP)) toggleStrutsKey
+     $ myConfig
+  where
+    toggleStrutsKey :: XConfig Layout -> (KeyMask, KeySym)
+    toggleStrutsKey XConfig{ modMask = m } = (m, xK_s)
