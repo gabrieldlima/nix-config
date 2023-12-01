@@ -18,6 +18,7 @@ import XMonad.Hooks.ManageHelpers -- Provides helper functions to be used in man
 import XMonad.Layout.ThreeColumns -- Layout for arranging windows in three columns
 import XMonad.Layout.Spacing      -- Add a configurable amount of space around windows
 import XMonad.Layout.Renamed      -- Modify the description of a layout in a flexible way
+import XMonad.Layout.Fullscreen   -- Send messages about fullscreen windows to layouts
 
 import XMonad.ManageHook          -- An EDSL for ManageHooks
 
@@ -30,6 +31,7 @@ main :: IO ()
 main = xmonad
      . ewmhFullscreen
      . ewmh
+     . fullscreenSupportBorder
      . withEasySB (statusBarProp "xmobar" (pure myXmobarPP)) toggleStrutsKey
      $ myConfig
   where
