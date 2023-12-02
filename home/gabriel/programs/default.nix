@@ -16,6 +16,7 @@
   ];
   home.packages = with pkgs; [
     _1password-gui
+    discord
     fd
     firefox
     neovim
