@@ -3,7 +3,7 @@
   ...
 }: {
   programs.xmobar = {
-    enable = true;
+    enable = false;
     extraConfig = ''
     Config {
              font     = "Vanilla Caramel Regular 12"
@@ -13,9 +13,7 @@
            , position = TopH 30
            , overrideRedirect = False
            , commands = [
-                          Run Date "<fc=#cba6f7>󰥔 </fc>%I:%M %p" "time" 10
-                        , Run Date "<fc=#a6e3a1>󰃭 </fc>%a %b %d" "date" 10
-                        , Run XMonadLog
+                          Run XMonadLog
                         , Run Cpu
                             [
                               "--template", "<fc=#b4befe> </fc><total>%"
@@ -48,6 +46,8 @@
                             [
                               "--template", "<fc=#89b4fa>󰕾 </fc><volume>%"
                             ] 10
+                        , Run Date "<fc=#cba6f7>󰥔 </fc>%I:%M %p" "time" 10
+                        , Run Date "<fc=#a6e3a1>󰃭 </fc>%a %b %d" "date" 10
                         ]
            , sepChar  = "%"
            , alignSep = "}{"
