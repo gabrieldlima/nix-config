@@ -10,6 +10,7 @@
     ./git.nix
     ./picom.nix
     ./starship.nix
+    ./tmux.nix
     ./wezterm.nix
     ./xmonad
     ./zathura.nix
