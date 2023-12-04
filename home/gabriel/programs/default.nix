@@ -4,6 +4,7 @@
 }: {
   imports = [
     ./bat.nix
+    ./eww.nix
     ./eza.nix
     ./fish.nix
     ./fzf.nix
@@ -18,6 +19,7 @@
   home.packages = with pkgs; [
     _1password-gui
     discord
+    google-chrome
     fd
     firefox
     neovim
