@@ -18,6 +18,12 @@
     ./programs
   ];
 
+	nixpkgs = {
+		config = {
+			allowUnfree = true;
+		};
+	};
+
   home = {
     username = "gabriel";
     homeDirectory = "/home/gabriel";
