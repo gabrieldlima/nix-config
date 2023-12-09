@@ -4,7 +4,7 @@
 }: {
   imports = [
     ./bat.nix
-    ./eww.nix
+    ./eww
     ./eza.nix
     ./fish.nix
     ./fzf.nix
