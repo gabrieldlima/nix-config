@@ -15,6 +15,7 @@ import XMonad                     -- Core XMonad module
 
 import XMonad.Hooks.EwmhDesktops  -- Enhances XMonad's handling of EWMH hints and full-screen support
 import XMonad.Hooks.ManageHelpers -- Provides helper functions to be used in manageHook
+import XMonad.Hooks.ManageDocks   -- Provides tools to automatically manage dock type programs
 import XMonad.ManageHook          -- An EDSL for ManageHooks
 import XMonad.Util.EZConfig       -- Utility for easily configuring keybindings
 import XMonad.Util.Ungrab         -- Handles releasing keyboard and pointer grabs
@@ -132,7 +133,7 @@ myStartupHook = do
 
 -- The available layouts.  Note that each layout is separated by |||, which
 -- denotes layout choice.
-myLayoutHook = tiled ||| Mirror tiled ||| Full
+myLayoutHook = avoidStruts (tiled ||| Mirror tiled ||| Full)
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
@@ -171,4 +172,4 @@ myConfig = def
   `additionalKeysP` myKeys
 
 main :: IO ()
-main = xmonad $ ewmhFullscreen $ ewmh $ myConfig
+main = xmonad $ ewmhFullscreen $ ewmh $ docks $ myConfig
