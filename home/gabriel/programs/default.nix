@@ -18,9 +18,9 @@
   ];
   home.packages = with pkgs; [
     _1password-gui
+    brave
     discord
     fd
-    firefox
     neovim
     nitrogen
     obsidian
