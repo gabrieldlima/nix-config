@@ -89,7 +89,7 @@ myTerminal :: String
 myTerminal = "wezterm"
 
 myBrowser :: String
-myBrowser = "qutebrowser"
+myBrowser = "brave"
 
 myLauncher :: String
 myLauncher = "rofi -show drun"
