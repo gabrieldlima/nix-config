@@ -27,6 +27,15 @@
   home = {
     username = "gabriel";
     homeDirectory = "/home/gabriel";
+
+    pointerCursor = {
+      name = "Catppuccin-Mocha-Light-Cursors";
+      package = pkgs.catppuccin-cursors.mochaLight;
+      size = 24;
+      x11 = {
+        enable = true;
+      };
+    };
   };
 
   gtk = {
@@ -45,7 +54,8 @@
   xresources = {
     properties = {
       "XTerm*faceName" = "FiraCode Nerd Font:size=12";
-      "Xcursor.size" = 64;
+      "Xcursor.theme" = "Catppuccin-Mocha-Light-Cursors";
+      "Xcursor.size" = 24;
     };
     extraConfig = ''
       *background: #050508
