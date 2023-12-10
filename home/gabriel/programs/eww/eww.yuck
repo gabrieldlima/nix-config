@@ -14,7 +14,7 @@
   ;; Specify how the window manager should make space for your window.
   ;; This is useful for bars, which should not overlap any other windows.
   :reserve (struts :side "top"
-                   :distance "40px")
+                   :distance "30px")
   ;; Specify what type of window this is. This will be used by your window
   ;; manager to determine how it should handle your window. Possible values:
   ;; normal, dock, toolbar, dialog, desktop.
