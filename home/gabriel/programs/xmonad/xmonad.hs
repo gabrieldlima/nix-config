@@ -16,6 +16,8 @@ import XMonad                     -- Core XMonad module
 import XMonad.Hooks.EwmhDesktops  -- Enhances XMonad's handling of EWMH hints and full-screen support
 import XMonad.Hooks.ManageHelpers -- Provides helper functions to be used in manageHook
 import XMonad.Hooks.ManageDocks   -- Provides tools to automatically manage dock type programs
+import XMonad.Layout.Fullscreen   -- Hooks for sending messages about fullscreen windows to layouts
+import XMonad.Layout.NoBorders    -- Make a given layout display without borders
 import XMonad.ManageHook          -- An EDSL for ManageHooks
 import XMonad.Util.EZConfig       -- Utility for easily configuring keybindings
 import XMonad.Util.Ungrab         -- Handles releasing keyboard and pointer grabs
@@ -77,7 +79,7 @@ myClickJustFocuses = True
 --  xprop | grep WM_CLASS
 -- and click on the client you're interested in.
 myManageHook :: ManageHook
-myManageHook = composeAll
+myManageHook = fullscreenManageHook <+> manageDocks <+> composeAll
     [
       isDialog --> doFloat
     ]
@@ -160,7 +162,7 @@ myLayoutHook = avoidStruts (tiled ||| Mirror tiled ||| Full)
 myConfig = def
     {
       modMask            = myModMask
-    , layoutHook         = myLayoutHook
+    , layoutHook         = smartBorders $ myLayoutHook
     , startupHook        = myStartupHook
     , manageHook         = myManageHook
     , borderWidth        = myBorderWidth
@@ -172,4 +174,9 @@ myConfig = def
   `additionalKeysP` myKeys
 
 main :: IO ()
-main = xmonad $ ewmhFullscreen $ ewmh $ docks $ myConfig
+main = xmonad
+     . fullscreenSupport
+     . docks
+     . ewmhFullscreen
+     . ewmh
+     $ myConfig
