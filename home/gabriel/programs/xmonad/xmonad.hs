@@ -62,7 +62,7 @@ myBorderWidth = 1
 --
 myNormalBorderColor, myFocusedBorderColor :: String
 myNormalBorderColor  = "#050508"
-myFocusedBorderColor = "#fab387"
+myFocusedBorderColor = "#b4befe"
 
 -- Whether focus follows the mouse pointer.
 --
