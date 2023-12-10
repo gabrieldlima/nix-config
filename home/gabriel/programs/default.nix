@@ -26,5 +26,6 @@
     obsidian
     rofi
     scrot
+    wmctrl
   ];
 }
