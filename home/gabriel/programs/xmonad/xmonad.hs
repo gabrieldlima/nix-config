@@ -11,17 +11,25 @@
 --
 -- Useful imports
 --
-import XMonad                     -- Core XMonad module
+-- Core
+import XMonad
 
-import XMonad.Hooks.EwmhDesktops  -- Enhances XMonad's handling of EWMH hints and full-screen support
-import XMonad.Hooks.ManageHelpers -- Provides helper functions to be used in manageHook
-import XMonad.Hooks.ManageDocks   -- Provides tools to automatically manage dock type programs
-import XMonad.Layout.Fullscreen   -- Hooks for sending messages about fullscreen windows to layouts
-import XMonad.Layout.NoBorders    -- Make a given layout display without borders
-import XMonad.ManageHook          -- An EDSL for ManageHooks
-import XMonad.Util.EZConfig       -- Utility for easily configuring keybindings
-import XMonad.Util.Ungrab         -- Handles releasing keyboard and pointer grabs
-import XMonad.Util.SpawnOnce      -- A module for spawning a command once, and only once
+-- Hooks
+import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
+import XMonad.ManageHook
+
+-- Layouts
+import XMonad.Layout.Fullscreen
+import XMonad.Layout.Gaps
+import XMonad.Layout.NoBorders
+import XMonad.Layout.Spacing
+
+-- Utils
+import XMonad.Util.EZConfig
+import XMonad.Util.SpawnOnce
+import XMonad.Util.Ungrab
 
 
 -------------------------------------------------------------------------------
@@ -106,6 +114,13 @@ myKeys =
     , ("M-p",        spawn myLauncher)   -- Launch rofi launcher
     , ("M-<Return>", spawn myTerminal)   -- Launch terminal
     , ("M-C-s",      spawn myScreenshot) -- Launch scrot
+
+    -- reset gaps
+    , (("M-g"), sendMessage $ setGaps [(L,0), (R,0), (U,0), (D,0)])
+    -- increment gaps
+    , (("M-C-g"), sequence_ [sendMessage $ IncGap 25 L, sendMessage $ IncGap 25 U, sendMessage $ IncGap 25 D, sendMessage $ IncGap 25 R])
+    -- decrement gaps
+    , (("M-S-g"), sequence_ [sendMessage $ DecGap 25 L, sendMessage $ DecGap 25 U, sendMessage $ DecGap 25 D, sendMessage $ DecGap 25 R])
     ]
 
 
@@ -135,7 +150,11 @@ myStartupHook = do
 
 -- The available layouts.  Note that each layout is separated by |||, which
 -- denotes layout choice.
-myLayoutHook = avoidStruts (tiled ||| Mirror tiled ||| Full)
+myLayoutHook = avoidStruts
+             $ gaps [(L,0), (R,0), (U,0), (D,0)]
+             $ spacingRaw False (Border 5 5 5 5) True (Border 5 5 5 5) True
+             $ smartBorders
+             $ tiled ||| Mirror tiled ||| Full
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
@@ -162,7 +181,7 @@ myLayoutHook = avoidStruts (tiled ||| Mirror tiled ||| Full)
 myConfig = def
     {
       modMask            = myModMask
-    , layoutHook         = smartBorders $ myLayoutHook
+    , layoutHook         = myLayoutHook
     , startupHook        = myStartupHook
     , manageHook         = myManageHook
     , borderWidth        = myBorderWidth
