@@ -21,6 +21,7 @@
     brave
     discord
     fd
+    gimp
     neovim
     nitrogen
     obsidian
