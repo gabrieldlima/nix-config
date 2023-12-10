@@ -29,6 +29,19 @@
     homeDirectory = "/home/gabriel";
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Catppuccin-Mocha-Compact-Lavender-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "lavender" ];
+        size = "compact";
+        tweaks = [ "black" "rimless" ];
+        variant = "mocha";
+      };
+    };
+  };
+
   # Enable home-manager and git
   programs.home-manager.enable = true;
 
