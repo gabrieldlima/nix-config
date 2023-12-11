@@ -1,3 +1,46 @@
+(defpoll time :interval "1s" "date '+%I:%M %p'")
+
+
+;; ----------------------------------------------------------------------------
+(defwidget nixosLogo []
+  (box :class "nixosLogo"
+    (image :path "${EWW_CONFIG_DIR}/assets/nixos.png"
+           :image-width 24
+           :image-height 24)))
+
+(defwidget desktop []
+  (box :class "desktop"
+    (label :text "NixOS")))
+
+(defwidget clock []
+  (box :class "clock"
+    (label :text "${time}")))
+
+
+;; ----------------------------------------------------------------------------
+(defwidget leftBox []
+  (box :class "leftBox"
+       :halign "start"
+       (nixosLogo)))
+
+(defwidget centerBox []
+  (box :class "centerBox"
+       :halign "center"
+       (desktop)))
+
+(defwidget rightBox []
+  (box :class "rightBox"
+       :halign "end"
+       (clock)))
+
+(defwidget eww []
+  (box :class "eww"
+       (leftBox)
+       (centerBox)
+       (rightBox)))
+
+
+;; ----------------------------------------------------------------------------
 (defwindow bar
   ;; Which monitor this window should be displayed on.
   :monitor 0
@@ -20,4 +63,4 @@
   ;; normal, dock, toolbar, dialog, desktop.
   ;; Default: dock if reserve is specified, normal otherwise.
   :windowtype "dock"
-  "EWW")
+  (eww))
