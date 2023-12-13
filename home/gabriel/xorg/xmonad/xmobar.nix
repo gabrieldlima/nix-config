@@ -3,7 +3,7 @@
   ...
 }: {
   programs.xmobar = {
-    enable = false;
+    enable = true;
     extraConfig = ''
     Config {
              font     = "Vanilla Caramel Regular 12"
