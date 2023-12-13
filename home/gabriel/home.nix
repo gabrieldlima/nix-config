@@ -16,6 +16,7 @@
 }: {
   imports = [
     ./programs
+    ./wayland
     ./xorg
   ];
 
