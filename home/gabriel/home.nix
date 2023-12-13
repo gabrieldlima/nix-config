@@ -35,7 +35,7 @@
       package = pkgs.catppuccin-cursors.mochaLight;
       size = 24;
       x11 = {
-        enable = true;
+        enable = false;
       };
     };
   };
