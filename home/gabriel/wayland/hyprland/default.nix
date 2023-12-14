@@ -3,7 +3,41 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    enable = true;
+    settings = {
+      general = {
+        # size of border around windows
+        border_size = 2;
+        # disable borders for floating windows
+        no_border_on_floating = false;
+        # gaps between windows
+        gaps_in = 5;
+        # gaps between windows and monitor edges
+        gaps_out = 20;
+        # border color for the active window
+        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        # border color for inactive windows
+        "col.inactive_border" = "rgba(595959aa)";
+        # in seconds, after how many seconds of cursor’s inactivity to hide it. Set to 0 for never
+        cursor_inactive_timeout = 0;
+        # which layout to use. (Available: dwindle, master)
+        layout = "master";
+        # if true, will not warp the cursor in many cases (focusing, keybinds, etc)
+        no_cursor_warps = false;
+        # if true, will not fall back to the next available window when moving focus in a direction where no window was found
+        no_focus_fallback = false;
+        # if on, will also apply the sensitivity to raw mouse output (e.g. sensitivity in games) NOTICE: really not recommended
+        apply_sens_to_raw = false;
+        # enables resizing windows by clicking and dragging on borders and gaps
+        resize_on_border = false;
+        # extends the area around the border where you can click and drag on, only used when general:resize_on_border is on
+        extend_border_grab_area = 15;
+        # show a cursor icon when hovering over borders, only used when general:resize_on_border is on
+        hover_icon_on_border = true;
+        # master switch for allowing tearing to occur
+        allow_tearing = false;
+      };
+    };
+
     extraConfig = ''
       #
       # Refer to the wiki for more information.
@@ -47,21 +81,6 @@
           }
 
           sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
-      }
-
-      general {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
-          gaps_in = 5
-          gaps_out = 20
-          border_size = 2
-          col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
-          col.inactive_border = rgba(595959aa)
-
-          layout = dwindle
-
-          # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
-          allow_tearing = false
       }
 
       decoration {
