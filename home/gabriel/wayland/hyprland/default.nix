@@ -36,6 +36,66 @@
         # master switch for allowing tearing to occur
         allow_tearing = false;
       };
+
+      decoration = {
+        # rounded corners’ radius (in layout px)
+        rounding = 10;
+        # opacity of active windows. (0.0 - 1.0)
+        active_opacity = 1.0;
+        # opacity of inactive windows. (0.0 - 1.0)
+        inactive_opacity = 1.0;
+        # opacity of fullscreen windows. (0.0 - 1.0)
+        fullscreen_opacity = 1.0;
+        # enable drop shadows on windows
+        drop_shadow = true;
+        # Shadow range (“size”) in layout px
+        shadow_range = 4;
+        # (1 - 4), in what power to render the falloff (more power, the faster the falloff)
+        shadow_render_power = 3;
+        # if true, the shadow will not be rendered behind the window itself, only around it
+        shadow_ignore_window = true;
+        # shadow’s color. Alpha dictates shadow’s opacity
+        "col.shadow" = "rgba(1a1a1aee)";
+        # shadow’s rendering offset.
+        shadow_offset = "0, 0";
+        # shadow’s scale. 0.0 - 1.0
+        shadow_scale = 1.0;
+        # enables dimming of inactive windows
+        dim_inactive = false;
+        # how much inactive windows should be dimmed, 0.0 - 1.0
+        dim_strength = 0.5;
+        # how much to dim the rest of the screen by when a special workspace is open. 0.0 - 1.0
+        dim_special = 0.2;
+        # how much the dimaround window rule should dim by. 0.0 - 1.0
+        dim_around = 0.4;
+
+        blur = {
+          # enable kawase window background blur
+          enabled = true;
+          # blur size (distance)
+          size = 3;
+          # the amount of passes to perform
+          passes = 1;
+          # make the blur layer ignore the opacity of the window
+          ignore_opacity = false;
+          # whether to enable further optimizations to the blur. Recommended to leave on, as it will massively improve performance
+          new_optimizations = true;
+          # if enabled, floating windows will ignore tiled windows in their blur. Only available if blur_new_optimizations is true. Will reduce overhead on floating blur significantly
+          xray = true;
+          # how much noise to apply. 0.0 - 1.0
+          noise = 0.0117;
+          # contrast modulation for blur. 0.0 - 2.0
+          contrast = 0.8916;
+          # brightness modulation for blur. 0.0 - 2.0
+          brightness = 0.8172;
+          # increase saturation of blurred colors. 0.0 - 1.0
+          vibrancy = 0;
+          # how strong the effect of vibrancy is on dark areas . 0.0 - 1.0
+          vibrancy_darkness = 0;
+          # whether to blur behind the special workspace (note: expensive)
+          special = false;
+        };
+      };
     };
 
     extraConfig = ''
@@ -81,25 +141,6 @@
           }
 
           sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
-      }
-
-      decoration {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
-          rounding = 10
-
-          blur {
-              enabled = true
-              size = 3
-              passes = 1
-              
-              vibrancy = 0.1696
-          }
-
-          drop_shadow = true
-          shadow_range = 4
-          shadow_render_power = 3
-          col.shadow = rgba(1a1a1aee)
       }
 
       animations {
