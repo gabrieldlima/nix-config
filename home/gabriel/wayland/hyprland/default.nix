@@ -146,6 +146,39 @@
           "border,1,3,easeout"
         ];
       };
+
+      input = {
+        # Appropriate XKB keymap parameter
+        kb_layout = "us";
+        # Engage numlock by default.
+        numlock_by_default = false;
+        # The repeat rate for held-down keys, in repeats per seconds
+        repeat_rate = 25;
+        # Delay before a held-down key is repeated, in milliseconds
+        repeat_delay = 600;
+        # Sets the mouse input sensitivity. Value will be clamped to the range -1.0 to 1.0
+        sensitivity = 0;
+        # Force no cursor acceleration. This bypasses most of your pointer settings to get as raw of a signal as possible. Enabling this is not recommended due to potential cursor desynchronization
+        force_no_accel = false;
+        # Switches RMB and LMB
+        left_handed = false;
+        # Sets the scroll button. Has to be an int, cannot be a string. Check wev if you have any doubts regarding the ID. 0 means default
+        scroll_button = 0;
+        # If the scroll button lock is enabled, the button does not need to be held down. Pressing and releasing the button once enables the button lock, the button is now considered logically held down. Pressing and releasing the button a second time logically releases the button. While the button is logically held down, motion events are converted to scroll events
+        scroll_button_lock = false;
+        # Inverts scrolling direction. When enabled, scrolling moves content directly instead of manipulating a scrollbar
+        natural_scroll = false;
+        # (0/1/2/3) Specify if and how cursor movement should affect window focus. See the note below
+        # - 0: Cursor movement will not change focus.
+        # - 1: Cursor movement will always change focus to the window under the cursor.
+        # - 2: Cursor focus will be detached from keyboard focus. Clicking on a window will move keyboard focus to that window.
+        # - 3: Cursor focus will be completely separate from keyboard focus. Clicking on a window will not change keyboard focus.
+        follow_mouse = 1;
+        # If disabled and follow_mouse=1 then mouse focus will not switch to the hovered window unless the mouse crosses a window boundary
+        mouse_refocus = true;
+        # If enabled (1 or 2), focus will change to the window under the cursor when changing from tiled-to-floating and vice versa. If 2, focus will also follow mouse on float-to-float switches
+        float_switch_override_focus = 1;
+      };
     };
 
     extraConfig = ''
@@ -177,21 +210,6 @@
       env = XCURSOR_SIZE,24
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
-      input {
-          kb_layout = us
-          kb_variant =
-          kb_model =
-          kb_options =
-          kb_rules =
-
-          follow_mouse = 1
-
-          touchpad {
-              natural_scroll = false
-          }
-
-          sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
-      }
 
       dwindle {
           # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
