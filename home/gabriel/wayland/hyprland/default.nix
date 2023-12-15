@@ -179,6 +179,61 @@
         # If enabled (1 or 2), focus will change to the window under the cursor when changing from tiled-to-floating and vice versa. If 2, focus will also follow mouse on float-to-float switches
         float_switch_override_focus = 1;
       };
+
+      misc = {
+        # disables the random hyprland logo / anime girl background
+        disable_hyprland_logo = false;
+        # disables the hyprland splash rendering. (requires a monitor reload to take effect)
+        disable_splash_rendering = false;
+        # makes the background always have hypr-chan, the hyprland mascot
+        force_hypr_chan = false;
+        # Enforce any of the 3 default wallpapers. Setting this to 0 disables the anime background. -1 means “random”
+        force_default_wallpaper = -1;
+        # controls the VFR status of hyprland. Heavily recommended to leave on true to conserve resources
+        vfr = true;
+        # controls the VRR (Adaptive Sync) of your monitors. 0 - off, 1 - on, 2 - fullscreen only
+        vrr = 0;
+        # If DPMS is set to off, wake up the monitors if the mouse moves
+        mouse_move_enables_dpms = false;
+        # If DPMS is set to off, wake up the monitors if a key is pressed
+        key_press_enables_dpms = false;
+        # Will make mouse focus follow the mouse when drag and dropping. Recommended to leave it enabled, especially for people using focus follows mouse at 0
+        always_follow_on_dnd = true;
+        # If true, will make keyboard-interactive layers keep their focus on mouse move (e.g. wofi, bemenu)
+        layers_hog_keyboard_focus = true;
+        # If true, will animate manual window resizes/moves
+        animate_manual_resizes = false;
+        # If true, will animate windows being dragged by mouse, note that this can cause weird behavior on some curves
+        animate_mouse_windowdragging = false;
+        # If true, the config will not reload automatically on save, and instead needs to be reloaded with hyprctl reload. Might save on battery.
+        disable_autoreload = false;
+        # Enable window swallowing
+        enable_swallow = false;
+        # Whether Hyprland should focus an app that requests to be focused (an activate request)
+        focus_on_activate = false;
+        # Disables direct scanout. Direct scanout attempts to reduce lag when there is only one fullscreen application on a screen (e.g. game). It is also recommended to set this to true if the fullscreen application shows graphical glitches
+        no_direct_scanout = true;
+        # Hides the cursor when the last input was a touch input until a mouse input is done
+        hide_cursor_on_touch = true;
+        # Whether mouse moving into a different monitor should focus it
+        mouse_move_focuses_monitor = true;
+        # [Warning: buggy] starts rendering before your monitor displays a frame in order to lower latency
+        render_ahead_of_time = false;
+        # how many ms of safezone to add to rendering ahead of time. Recommended 1-2.
+        render_ahead_safezone = 1;
+        # the factor to zoom by around the cursor. AKA. Magnifying glass. Minimum 1.0 (meaning no zoom)
+        cursor_zoom_factor = 1.0;
+        # whether the zoom should follow the cursor rigidly (cursor is always centered if it can be) or loosely
+        cursor_zoom_rigid = false;
+        # if true, will allow you to restart a lockscreen app in case it crashes (red screen of death)
+        allow_session_lock_restore = false;
+        # change the background color. (requires enabled disable_hyprland_logo)
+        background_color = "0x111111";
+        # close the special workspace if the last window is removed
+        close_special_on_empty = true;
+        # if there is a fullscreen window, whether a new tiled window opened should replace the fullscreen one or stay behind. 0 - behind, 1 - takes over, 2 - unfullscreen the current fullscreen window
+        new_window_takes_over_fullscreen = 0;
+      };
     };
 
     extraConfig = ''
@@ -225,11 +280,6 @@
       gestures {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
           workspace_swipe = false
-      }
-
-      misc {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
-          force_default_wallpaper = -1 # Set to 0 to disable the anime mascot wallpapers
       }
 
       # Example per-device config
