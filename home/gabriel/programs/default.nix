@@ -20,8 +20,8 @@
     discord
     fd
     gimp
+    hyprpaper
     neovim
-    nitrogen
     obsidian
     rofi
   ];
