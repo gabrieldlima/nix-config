@@ -18,6 +18,17 @@
   wayland.windowManager.hyprland = {
     xwayland.enable = true;
     settings = {
+      ###############################################################################
+      # Monitors
+      ###############################################################################
+      monitor = "HDMI-A-2,1920x1080@60,0x0,1";
+
+      # will execute only on launch
+      exec-once = "hyprpaper";
+
+      ###############################################################################
+      # General
+      ###############################################################################
       general = {
         # size of border around windows
         border_size = 2;
@@ -51,6 +62,9 @@
         allow_tearing = false;
       };
 
+      ###############################################################################
+      # Decoration
+      ###############################################################################
       decoration = {
         # rounded corners’ radius (in layout px)
         rounding = 10;
@@ -111,6 +125,9 @@
         };
       };
 
+      ###############################################################################
+      # Animations
+      ###############################################################################
       animations = {
         # enable animations
         enabled = true;
@@ -161,6 +178,9 @@
         ];
       };
 
+      ###############################################################################
+      # Input
+      ###############################################################################
       input = {
         # Appropriate XKB keymap parameter
         kb_layout = "us";
@@ -194,6 +214,9 @@
         float_switch_override_focus = 1;
       };
 
+      ###############################################################################
+      # Misc
+      ###############################################################################
       misc = {
         # disables the random hyprland logo / anime girl background
         disable_hyprland_logo = false;
@@ -249,6 +272,9 @@
         new_window_takes_over_fullscreen = 0;
       };
 
+      ###############################################################################
+      # XWayland
+      ###############################################################################
       xwayland = {
         # uses the nearest neigbor filtering for xwayland apps, making them pixelated rather than blurry
         use_nearest_neighbor = true;
@@ -256,6 +282,9 @@
         force_zero_scaling = false;
       };
 
+      ###############################################################################
+      # Master layout
+      ###############################################################################
       master = {
         # enable adding additional master windows in a horizontal split style
         allow_small_split = false;
@@ -281,18 +310,5 @@
         drop_at_cursor = true;
       };
     };
-
-    extraConfig = ''
-      monitor=,preferred,auto,auto
-
-      gestures {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
-          workspace_swipe = false
-      }
-
-      device:epic-mouse-v1 {
-          sensitivity = -0.5
-      }
-    '';
   };
 }

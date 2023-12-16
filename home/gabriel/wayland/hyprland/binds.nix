@@ -20,7 +20,7 @@
     };
 
     # Variables
-    "$browser" = "brave --enable-features=UseOzonePlatform --ozone-platform=wayland";
+    "$browser" = "brave";
     "$launcher" = "rofi -show drun";
     "$terminal" = "wezterm";
 
