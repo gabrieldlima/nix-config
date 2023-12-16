@@ -283,108 +283,16 @@
     };
 
     extraConfig = ''
-      #
-      # Refer to the wiki for more information.
-
-      #
-      # Please note not all available settings / options are set here.
-      # For a full list, see the wiki
-      #
-
-      # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor=,preferred,auto,auto
-
-
-      # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-
-      # Execute your favorite apps at launch
-      # exec-once = waybar & hyprpaper & firefox
-
-      # Source a file (multi-file configs)
-      # source = ~/.config/hypr/myColors.conf
-
-      # Set programs that you use
-      $terminal = wezterm
-      $fileManager = dolphin
-      $menu = wofi --show drun
-      # Some default env vars.
-      env = XCURSOR_SIZE,24
-
-      # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
 
       gestures {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
           workspace_swipe = false
       }
 
-      # Example per-device config
-      # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
       device:epic-mouse-v1 {
           sensitivity = -0.5
       }
-
-      # Example windowrule v1
-      # windowrule = float, ^(kitty)$
-      # Example windowrule v2
-      # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-      # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-      windowrulev2 = nomaximizerequest, class:.* # You'll probably like this.
-
-
-      # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-      $mainMod = SUPER
-
-      # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-      bind = $mainMod, Q, exec, $terminal
-      bind = $mainMod, C, killactive,
-      bind = $mainMod, M, exit,
-      bind = $mainMod, E, exec, $fileManager
-      bind = $mainMod, V, togglefloating,
-      bind = $mainMod, R, exec, $menu
-      bind = $mainMod, P, pseudo, # dwindle
-      bind = $mainMod, J, togglesplit, # dwindle
-
-      # Move focus with mainMod + arrow keys
-      bind = $mainMod, left, movefocus, l
-      bind = $mainMod, right, movefocus, r
-      bind = $mainMod, up, movefocus, u
-      bind = $mainMod, down, movefocus, d
-
-      # Switch workspaces with mainMod + [0-9]
-      bind = $mainMod, 1, workspace, 1
-      bind = $mainMod, 2, workspace, 2
-      bind = $mainMod, 3, workspace, 3
-      bind = $mainMod, 4, workspace, 4
-      bind = $mainMod, 5, workspace, 5
-      bind = $mainMod, 6, workspace, 6
-      bind = $mainMod, 7, workspace, 7
-      bind = $mainMod, 8, workspace, 8
-      bind = $mainMod, 9, workspace, 9
-      bind = $mainMod, 0, workspace, 10
-
-      # Move active window to a workspace with mainMod + SHIFT + [0-9]
-      bind = $mainMod SHIFT, 1, movetoworkspace, 1
-      bind = $mainMod SHIFT, 2, movetoworkspace, 2
-      bind = $mainMod SHIFT, 3, movetoworkspace, 3
-      bind = $mainMod SHIFT, 4, movetoworkspace, 4
-      bind = $mainMod SHIFT, 5, movetoworkspace, 5
-      bind = $mainMod SHIFT, 6, movetoworkspace, 6
-      bind = $mainMod SHIFT, 7, movetoworkspace, 7
-      bind = $mainMod SHIFT, 8, movetoworkspace, 8
-      bind = $mainMod SHIFT, 9, movetoworkspace, 9
-      bind = $mainMod SHIFT, 0, movetoworkspace, 10
-
-      # Example special workspace (scratchpad)
-      bind = $mainMod, S, togglespecialworkspace, magic
-      bind = $mainMod SHIFT, S, movetoworkspace, special:magic
-
-      # Scroll through existing workspaces with mainMod + scroll
-      bind = $mainMod, mouse_down, workspace, e+1
-      bind = $mainMod, mouse_up, workspace, e-1
-
-      # Move/resize windows with mainMod + LMB/RMB and dragging
-      bindm = $mainMod, mouse:272, movewindow
-      bindm = $mainMod, mouse:273, resizewindow
     '';
   };
 }

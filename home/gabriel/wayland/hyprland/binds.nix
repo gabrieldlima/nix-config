@@ -18,5 +18,92 @@
       # If enabled, when on a fullscreen window, movefocus will cycle fullscreen, if not, it will move the focus in a direction
       movefocus_cycles_fullscreen = true;
     };
+
+    # Variables
+    "$browser" = "brave --enable-features=UseOzonePlatform --ozone-platform=wayland";
+    "$launcher" = "rofi -show drun";
+    "$terminal" = "wezterm";
+
+    # Set the modKey
+    "$modKey" = "SUPER";
+
+    bind = [
+      "$modKey, RETURN, exec, $terminal"
+      "$modKey, B,      exec, $browser"
+      "$modKey, P,      exec, $launcher"
+
+      # closes (not kills) the active window
+      "$modKey SHIFT, C,     killactive"
+      # exits the compositor with no questions asked.
+      "$modKey SHIFT, Q,     exit"
+      # toggles the focused window’s fullscreen state
+      "$modKey,       F,     fullscreen"
+      # toggles the current window’s floating state
+      "$modKey,       SPACE, togglefloating"
+      # center the active window note: floating only
+      "$modKey SHIFT, SPACE, centerwindow"
+
+      # Move focus with $modKey + hjkl
+      "$modKey, h, movefocus, l"
+      "$modKey, l, movefocus, r"
+      "$modKey, k, movefocus, u"
+      "$modKey, j, movefocus, d"
+
+      # Move windows with $modKey + SHIFT + hjkl
+      "$modKey SHIFT, h, movewindow, l"
+      "$modKey SHIFT, l, movewindow, r"
+      "$modKey SHIFT, k, movewindow, u"
+      "$modKey SHIFT, j, movewindow, d"
+
+      # Resize windows with $modKey + ALT + hjkl
+      "$modKey ALT, h, resizeactive, -50 0"
+      "$modKey ALT, l, resizeactive, 50 0"
+      "$modKey ALT, k, resizeactive, 0 -50"
+      "$modKey ALT, j, resizeactive, 0 50"
+
+      # swaps the current window with master. If the current window is the master, swaps it with the first child.
+      "$modKey SHIFT, RETURN, layoutmsg, swapwithmaster"
+
+      # Switch workspaces with modKey + [0-9]
+      "$modKey, 1, workspace, 1"
+      "$modKey, 2, workspace, 2"
+      "$modKey, 3, workspace, 3"
+      "$modKey, 4, workspace, 4"
+      "$modKey, 5, workspace, 5"
+      "$modKey, 6, workspace, 6"
+      "$modKey, 7, workspace, 7"
+      "$modKey, 8, workspace, 8"
+      "$modKey, 9, workspace, 9"
+      "$modKey, 0, workspace, 10"
+
+      # Move active window to a workspace with modKey + SHIFT + [0-9]
+      "$modKey SHIFT, 1, movetoworkspacesilent, 1"
+      "$modKey SHIFT, 2, movetoworkspacesilent, 2"
+      "$modKey SHIFT, 3, movetoworkspacesilent, 3"
+      "$modKey SHIFT, 4, movetoworkspacesilent, 4"
+      "$modKey SHIFT, 5, movetoworkspacesilent, 5"
+      "$modKey SHIFT, 6, movetoworkspacesilent, 6"
+      "$modKey SHIFT, 7, movetoworkspacesilent, 7"
+      "$modKey SHIFT, 8, movetoworkspacesilent, 8"
+      "$modKey SHIFT, 9, movetoworkspacesilent, 9"
+      "$modKey SHIFT, 0, movetoworkspacesilent, 10"
+
+      # Change focus to another window, bring it to the top
+      "$modKey, Tab, cyclenext"
+      "$modKey, Tab, bringactivetotop"
+      "$modKey SHIFT, Tab, cyclenext, prev"
+      "$modKey SHIFT, Tab, bringactivetotop"
+
+      # Move/resize windows with modKey + LMB/RMB and dragging
+      "$modKey, mouse:272, movewindow"
+
+      # Scroll through workspaces with $modKey + mouse sideup/sidedown
+      "$modKey, mouse:276, workspace, +1"
+      "$modKey, mouse:275, workspace, -1"
+
+      # Scroll through existing workspaces with $modKey + scroll
+      "$modKey, mouse_down, workspace, e+1"
+      "$modKey, mouse_up, workspace, e-1"
+    ];
   };
 }
