@@ -63,6 +63,8 @@
     wacom.enable = false;
   };
 
+  hardware.opengl.enable = true;
+
   # Enable the Pulseaudio sound server
 	sound.enable = true;
 	hardware.pulseaudio.enable = true;
