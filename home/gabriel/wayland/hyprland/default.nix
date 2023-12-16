@@ -24,7 +24,10 @@
       monitor = "HDMI-A-2,1920x1080@60,0x0,1";
 
       # will execute only on launch
-      exec-once = "hyprpaper";
+      exec-once = [
+        "hyprpaper"
+        "eww open bar"
+      ];
 
       ###############################################################################
       # General
