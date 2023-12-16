@@ -12,6 +12,7 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
+    xwayland.enable = true;
     settings = {
       general = {
         # size of border around windows
@@ -242,6 +243,13 @@
         close_special_on_empty = true;
         # if there is a fullscreen window, whether a new tiled window opened should replace the fullscreen one or stay behind. 0 - behind, 1 - takes over, 2 - unfullscreen the current fullscreen window
         new_window_takes_over_fullscreen = 0;
+      };
+
+      xwayland = {
+        # uses the nearest neigbor filtering for xwayland apps, making them pixelated rather than blurry
+        use_nearest_neighbor = true;
+        # forces a scale of 1 on xwayland windows on scaled displays
+        force_zero_scaling = false;
       };
     };
 
