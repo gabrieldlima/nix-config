@@ -255,6 +255,31 @@
         # forces a scale of 1 on xwayland windows on scaled displays
         force_zero_scaling = false;
       };
+
+      master = {
+        # enable adding additional master windows in a horizontal split style
+        allow_small_split = false;
+        # (0.0 - 1.0) the scale of the special workspace windows
+        special_scale_factor = 0.5;
+        # (0.0 - 1.0) master split factor, the ratio of master split
+        mfact = 0.5;
+        # whether a newly open window should replace the master or join the slaves
+        new_is_master = true;
+        # whether a newly open window should be on the top of the stack
+        new_on_top = false;
+        # whether to apply gaps when there is only one window on a workspace, aka. smart gaps. (default: disabled - 0) no border - 1, with border - 2
+        no_gaps_when_only = 0;
+        # default placement of the master area, can be left, right, top, bottom or center
+        orientation = "left";
+        # inherit fullscreen status when cycling/swapping to another window (e.g. monocle layout)
+        inherit_fullscreen = true;
+        # when using orientation=center, keep the master window centered, even when it is the only window in the workspace.
+        always_center_master = false;
+        # if enabled, resizing direction will be determined by the mouse’s position on the window (nearest to which corner). Else, it is based on the window’s tiling position
+        smart_resizing = true;
+        # when enabled, dragging and dropping windows will put them at the cursor position. Otherwise, when dropped at the stack side, they will go to the top/bottom of the stack depending on new_on_top
+        drop_at_cursor = true;
+      };
     };
 
     extraConfig = ''
@@ -286,17 +311,6 @@
       env = XCURSOR_SIZE,24
 
       # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
-
-      dwindle {
-          # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-          pseudotile = true # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-          preserve_split = true # you probably want this
-      }
-
-      master {
-          # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-          new_is_master = true
-      }
 
       gestures {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
