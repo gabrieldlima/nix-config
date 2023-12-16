@@ -24,5 +24,6 @@
     neovim
     obsidian
     rofi
+    sxiv
   ];
 }
