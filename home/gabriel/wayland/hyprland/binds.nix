@@ -43,6 +43,13 @@
       # center the active window note: floating only
       "$modKey SHIFT, SPACE, centerwindow"
 
+      # toggles the current active window into a group
+      "$modKey, g, togglegroup"
+
+      # switches to the next window in a group
+      "$modKey CONTROL, p, changegroupactive, b"
+      "$modKey CONTROL, n, changegroupactive, f"
+
       # Move focus with $modKey + hjkl
       "$modKey, h, movefocus, l"
       "$modKey, l, movefocus, r"

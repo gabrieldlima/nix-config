@@ -288,35 +288,35 @@
         # whether Hyprland should focus on the window that has just been moved out of the group
         focus_removed_window = true;
         # active group border color
-        "col.border_active" = "0x66ffff00";
+        "col.border_active" = "$red";
         # inactive (out of focus) group border color
-        "col.border_inactive" = "0x66777700";
+        "col.border_inactive" = "$base";
         # active locked group border color
-        "col.border_locked_active" = "0x66ff5500";
+        "col.border_locked_active" = "$red";
         # inactive locked group border color
-        "col.border_locked_inactive" = "0x66775500";
+        "col.border_locked_inactive" = "$base";
 
         groupbar = {
           # font used to display groupbar titles
           font_family = "Vanilla Caramel";
           # font size for the above
-          font_size = 8;
+          font_size = 12;
           #	whether to draw gradients under the titles of the above
           gradients = true;
           # whether to render titles in the group bar decoration
-          render_titles = true;
+          render_titles = false;
           # whether scrolling in the groupbar changes group active window
           scrolling = true;
           # controls the group bar text color
-          text_color = "0xffffffff";
+          text_color = "$text";
           # active group border color
-          "col.active" = "0x66ffff00";
+          "col.active" = "$red";
           # inactive (out of focus) group border color
-          "col.inactive" = "0x66777700";
+          "col.inactive" = "$base";
           # active locked group border color
-          "col.locked_active" = "0x66ff5500";
+          "col.locked_active" = "$red";
           # inactive locked group border color
-          "col.locked_inactive" = "0x66775500";
+          "col.locked_inactive" = "$base";
         };
       };
 
