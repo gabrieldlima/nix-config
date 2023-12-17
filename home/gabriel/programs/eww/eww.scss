@@ -7,3 +7,23 @@
   color: #cdd6f4;
   background-color: #050508;
 }
+
+.workspaces {
+  padding: 5px;
+  font-size: 15px;
+
+  &.current * {
+    font-size: 15;
+    color: #89b4fa;
+  }
+
+  &.occupied {
+    font-size: 15;
+    color: #b4befe;
+  }
+
+  &.empty {
+    font-size: 10;
+    color: #313244;
+  }
+}
