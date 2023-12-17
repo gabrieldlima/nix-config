@@ -54,7 +54,7 @@
         # if true, will not warp the cursor in many cases (focusing, keybinds, etc)
         no_cursor_warps = true;
         # if true, will not fall back to the next available window when moving focus in a direction where no window was found
-        no_focus_fallback = false;
+        no_focus_fallback = true;
         # if on, will also apply the sensitivity to raw mouse output (e.g. sensitivity in games) NOTICE: really not recommended
         apply_sens_to_raw = false;
         # enables resizing windows by clicking and dragging on borders and gaps
