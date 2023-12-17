@@ -325,7 +325,7 @@
       ###############################################################################
       misc = {
         # disables the random hyprland logo / anime girl background
-        disable_hyprland_logo = false;
+        disable_hyprland_logo = true;
         # disables the hyprland splash rendering. (requires a monitor reload to take effect)
         disable_splash_rendering = false;
         # makes the background always have hypr-chan, the hyprland mascot
@@ -371,7 +371,7 @@
         # if true, will allow you to restart a lockscreen app in case it crashes (red screen of death)
         allow_session_lock_restore = false;
         # change the background color. (requires enabled disable_hyprland_logo)
-        background_color = "0x111111";
+        background_color = "$base";
         # close the special workspace if the last window is removed
         close_special_on_empty = true;
         # if there is a fullscreen window, whether a new tiled window opened should replace the fullscreen one or stay behind. 0 - behind, 1 - takes over, 2 - unfullscreen the current fullscreen window
