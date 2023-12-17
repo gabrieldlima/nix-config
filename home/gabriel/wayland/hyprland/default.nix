@@ -72,7 +72,7 @@
       ###############################################################################
       decoration = {
         # rounded corners’ radius (in layout px)
-        rounding = 10;
+        rounding = 0;
         # opacity of active windows. (0.0 - 1.0)
         active_opacity = 1.0;
         # opacity of inactive windows. (0.0 - 1.0)
