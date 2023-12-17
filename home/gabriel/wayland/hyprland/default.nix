@@ -118,7 +118,7 @@
         # if true, the shadow will not be rendered behind the window itself, only around it
         shadow_ignore_window = true;
         # shadow’s color. Alpha dictates shadow’s opacity
-        "col.shadow" = "rgba(1a1a1aee)";
+        "col.shadow" = "$base";
         # shadow’s rendering offset.
         shadow_offset = "0, 0";
         # shadow’s scale. 0.0 - 1.0
