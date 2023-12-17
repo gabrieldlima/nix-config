@@ -42,7 +42,7 @@
         # gaps between windows
         gaps_in = 5;
         # gaps between windows and monitor edges
-        gaps_out = 20;
+        gaps_out = 10;
         # border color for the active window
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         # border color for inactive windows
