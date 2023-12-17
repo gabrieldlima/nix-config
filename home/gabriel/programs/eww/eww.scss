@@ -8,9 +8,12 @@
   background-color: #050508;
 }
 
+.nixosLogo {
+  padding-right: 5px;
+}
+
 .workspaces {
   padding: 5px;
-  font-size: 15px;
 
   &.current * {
     font-size: 15;
@@ -26,4 +29,9 @@
     font-size: 10;
     color: #313244;
   }
+}
+
+.window_title {
+  font-size: 15;
+  color: #cdd6f4;
 }

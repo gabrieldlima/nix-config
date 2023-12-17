@@ -1,5 +1,6 @@
 (deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/get-workspaces.sh")
 (deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/get-active-workspace.sh")
+(deflisten window :initial " NixOS " "bash ~/.config/eww/scripts/get-window-title.sh")
 
 (defpoll time :interval "1s" "date '+%I:%M %p'")
 
@@ -13,16 +14,19 @@
 
 ;; hyprland workspaces
 (defwidget workspaces []
-  (box :space-evenly false
+  (box :space-evenly true
     (label :text "${workspaces}${current_workspace}" :visible false)
       (for workspace in workspaces
         (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
           (box :class "workspaces ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
             (label :text "${workspace.id == current_workspace ? "" : ""}"))))))
 
-(defwidget desktop []
-  (box :class "desktop"
-    (label :text "NixOS")))
+;; hyprland window title
+(defwidget window_title []
+  (box :class "window_title"
+       :space-evenly false
+    (label :text "${window}"
+           :limit-width 50)))
 
 (defwidget clock []
   (box :class "clock"
@@ -40,7 +44,7 @@
 (defwidget centerBox []
   (box :class "centerBox"
        :halign "center"
-       (desktop)))
+       (window_title)))
 
 (defwidget rightBox []
   (box :class "rightBox"
