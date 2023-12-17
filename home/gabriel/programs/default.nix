@@ -21,9 +21,11 @@
     fd
     gimp
     hyprpaper
+    jq
     neovim
     obsidian
     rofi
+    socat
     sxiv
   ];
 }
