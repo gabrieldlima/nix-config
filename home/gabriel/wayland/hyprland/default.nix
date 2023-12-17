@@ -250,6 +250,47 @@
       };
 
       ###############################################################################
+      # Group
+      ###############################################################################
+      group = {
+        # whether new windows in a group spawn after current or at group tail
+        insert_after_current = true;
+        # whether Hyprland should focus on the window that has just been moved out of the group
+        focus_removed_window = true;
+        # active group border color
+        "col.border_active" = "0x66ffff00";
+        # inactive (out of focus) group border color
+        "col.border_inactive" = "0x66777700";
+        # active locked group border color
+        "col.border_locked_active" = "0x66ff5500";
+        # inactive locked group border color
+        "col.border_locked_inactive" = "0x66775500";
+
+        groupbar = {
+          # font used to display groupbar titles
+          font_family = "Vanilla Caramel";
+          # font size for the above
+          font_size = 8;
+          #	whether to draw gradients under the titles of the above
+          gradients = true;
+          # whether to render titles in the group bar decoration
+          render_titles = true;
+          # whether scrolling in the groupbar changes group active window
+          scrolling = true;
+          # controls the group bar text color
+          text_color = "0xffffffff";
+          # active group border color
+          "col.active" = "0x66ffff00";
+          # inactive (out of focus) group border color
+          "col.inactive" = "0x66777700";
+          # active locked group border color
+          "col.locked_active" = "0x66ff5500";
+          # inactive locked group border color
+          "col.locked_inactive" = "0x66775500";
+        };
+      };
+
+      ###############################################################################
       # Misc
       ###############################################################################
       misc = {
