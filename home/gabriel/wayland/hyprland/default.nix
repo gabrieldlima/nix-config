@@ -401,7 +401,7 @@
         # whether a newly open window should replace the master or join the slaves
         new_is_master = true;
         # whether a newly open window should be on the top of the stack
-        new_on_top = false;
+        new_on_top = true;
         # whether to apply gaps when there is only one window on a workspace, aka. smart gaps. (default: disabled - 0) no border - 1, with border - 2
         no_gaps_when_only = 0;
         # default placement of the master area, can be left, right, top, bottom or center
