@@ -64,6 +64,7 @@
   };
 
   hardware.opengl.enable = true;
+  hardware.opentabletdriver.enable = true;
 
   # Enable the Pulseaudio sound server
 	sound.enable = true;
