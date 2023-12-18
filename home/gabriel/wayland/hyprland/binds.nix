@@ -63,10 +63,10 @@
       "$modKey SHIFT, j, movewindow, d"
 
       # Resize windows with $modKey + ALT + hjkl
-      "$modKey ALT, h, resizeactive, -50 0"
-      "$modKey ALT, l, resizeactive, 50 0"
-      "$modKey ALT, k, resizeactive, 0 -50"
-      "$modKey ALT, j, resizeactive, 0 50"
+      "$modKey CONTROL, h, resizeactive, -50 0"
+      "$modKey CONTROL, l, resizeactive, 50 0"
+      "$modKey CONTROL, k, resizeactive, 0 -50"
+      "$modKey CONTROL, j, resizeactive, 0 50"
 
       # swaps the current window with master. If the current window is the master, swaps it with the first child.
       "$modKey SHIFT, RETURN, layoutmsg, swapwithmaster"
