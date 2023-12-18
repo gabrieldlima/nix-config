@@ -1,11 +1,18 @@
+;; ============================================================================
+;; Variables
+;; ============================================================================
 (deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/get-workspaces.sh")
 (deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/get-active-workspace.sh")
 (deflisten window :initial " NixOS " "bash ~/.config/eww/scripts/get-window-title.sh")
 
 (defpoll time :interval "1s" "date '+%I:%M %p'")
+(defpoll date :interval "1s" "date '+%a %b %d'")
 
 
-;; ----------------------------------------------------------------------------
+;; ============================================================================
+;; Widgets
+;; ============================================================================
+;; logo
 (defwidget nixosLogo []
   (box :class "nixosLogo"
     (image :path "${EWW_CONFIG_DIR}/assets/nixos.png"
@@ -28,12 +35,21 @@
     (label :text "${window}"
            :limit-width 50)))
 
-(defwidget clock []
-  (box :class "clock"
+;; clock
+(defwidget time []
+  (box :class "time"
     (label :text "${time}")))
 
+;; date
+(defwidget date []
+  (box :class "date"
+    (label :text "${date}")))
 
-;; ----------------------------------------------------------------------------
+
+;; ============================================================================
+;; Bar structure
+;; ============================================================================
+;; left side
 (defwidget leftBox []
   (box :class "leftBox"
        :halign "start"
@@ -41,16 +57,20 @@
        (nixosLogo)
        (window_title)))
 
+;; center
 (defwidget centerBox []
   (box :class "centerBox"
        :halign "center"
        (workspaces)))
 
+;; right side
 (defwidget rightBox []
   (box :class "rightBox"
        :halign "end"
-       (clock)))
+       (date)
+       (time)))
 
+;; eww bar
 (defwidget eww []
   (box :class "eww"
        (leftBox)
@@ -58,7 +78,9 @@
        (rightBox)))
 
 
-;; ----------------------------------------------------------------------------
+;; ============================================================================
+;; EWW
+;; ============================================================================
 (defwindow bar
   ;; Which monitor this window should be displayed on.
   :monitor 0
