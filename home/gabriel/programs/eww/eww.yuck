@@ -39,12 +39,12 @@
        :halign "start"
        :space-evenly false
        (nixosLogo)
-       (workspaces)))
+       (window_title)))
 
 (defwidget centerBox []
   (box :class "centerBox"
        :halign "center"
-       (window_title)))
+       (workspaces)))
 
 (defwidget rightBox []
   (box :class "rightBox"
