@@ -16,7 +16,7 @@
   padding: 5px;
 
   &.current * {
-    font-size: 15;
+    font-size: 18;
     color: #89b4fa;
   }
 
@@ -26,7 +26,7 @@
   }
 
   &.empty {
-    font-size: 10;
+    font-size: 15;
     color: #313244;
   }
 }
