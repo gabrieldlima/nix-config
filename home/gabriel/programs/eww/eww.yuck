@@ -23,17 +23,17 @@
 (defwidget workspaces []
   (box :space-evenly true
     (label :text "${workspaces}${current_workspace}" :visible false)
-      (for workspace in workspaces
-        (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
-          (box :class "workspaces ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
-            (label :text "${workspace.id == current_workspace ? "" : ""}"))))))
+    (for workspace in workspaces
+      (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+        (box :class "workspaces ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+          (label :text "${workspace.id == current_workspace ? "" : ""}"))))))
 
 ;; hyprland window title
 (defwidget window_title []
   (box :class "window_title"
        :space-evenly false
     (label :text "${window}"
-           :limit-width 50)))
+           :limit-width 100)))
 
 ;; clock
 (defwidget time []
