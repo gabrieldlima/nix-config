@@ -32,7 +32,7 @@
 (defwidget window_title []
   (box :class "window_title"
     (label :text "${window}"
-           :limit-width 100)))
+           :limit-width 50)))
 
 ;; clock
 (defwidget time []
@@ -85,8 +85,8 @@
   :monitor 0
   ;; Geometry of the window.
   :geometry (geometry :x "0%"
-                      :y "0px"
-                      :width "100%"
+                      :y "5px"
+                      :width "1900px"
                       :height "30px"
                       :anchor "top center")
   ;; Where the window should appear in the stack. Possible values: fg, bg.
