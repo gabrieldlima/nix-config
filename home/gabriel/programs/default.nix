@@ -9,6 +9,7 @@
     ./fish.nix
     ./fzf.nix
     ./git.nix
+    ./qutebrowser.nix
     ./starship.nix
     ./tmux.nix
     ./wezterm.nix
