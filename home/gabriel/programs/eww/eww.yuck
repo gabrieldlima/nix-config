@@ -31,7 +31,6 @@
 ;; hyprland window title
 (defwidget window_title []
   (box :class "window_title"
-       :space-evenly false
     (label :text "${window}"
            :limit-width 100)))
 
