@@ -24,7 +24,7 @@
         # Modules that will be displayed on the left, center and right
         modules-left = [];
         modules-center = [];
-        modules-right = [];
+        modules-right = ["clock"];
 
         # Margins value using the css format without units
         margin-top = 5;
@@ -38,6 +38,15 @@
         exclusive = true;
         # Prefer fixed center position for the modules-center block
         fixed-center = true;
+
+        # Modules
+        clock = {
+          interval = 60;
+          format = "{:%I:%M %p}";
+          timezone = "America/Sao_Paulo";
+          tooltip = true;
+          tooltip-format = "{:%A, %B %d}";
+        };
       };
     };
 
