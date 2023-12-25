@@ -2,6 +2,10 @@
   pkgs,
   ...
 }: {
+  home.file."logo.png" = {
+    source = ./logo.png;
+    target = ".config/waybar/logo.png";
+  };
   programs.waybar = {
     enable = true;
 
@@ -22,7 +26,7 @@
         width = 1910;
 
         # Modules that will be displayed on the left, center and right
-        modules-left = [];
+        modules-left = ["image"];
         modules-center = [];
         modules-right = ["clock"];
 
@@ -47,6 +51,11 @@
           tooltip = true;
           tooltip-format = "{:%A, %B %d}";
         };
+
+        image = {
+          path = "/home/gabriel/.config/waybar/logo.png";
+          size = 24;
+        };
       };
     };
 
@@ -57,6 +66,8 @@
         color: #cdd6f4;
         background: #050508;
         border-radius: 10px;
+        padding-left: 1px;
+        padding-right: 1px;
       }
     '';
   };
