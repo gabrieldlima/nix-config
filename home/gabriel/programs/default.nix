@@ -27,5 +27,6 @@
     rofi
     socat
     sxiv
+    xdg-desktop-portal-hyprland
   ];
 }
