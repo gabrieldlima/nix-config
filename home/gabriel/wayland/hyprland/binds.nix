@@ -20,7 +20,7 @@
     };
 
     # Variables
-    "$browser" = "brave";
+    "$browser" = "qutebrowser";
     "$launcher" = "rofi -show drun";
     "$terminal" = "wezterm";
 
