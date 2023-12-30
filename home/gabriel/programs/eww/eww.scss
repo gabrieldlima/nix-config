@@ -1,0 +1,43 @@
+* {
+  all: unset;
+}
+
+.bar {
+  font-family: "Vanilla Caramel";
+  color: #cdd6f4;
+  background-color: #050508;
+  border-radius: 10px;
+}
+
+.eww {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.logo {
+  padding-right: 5px;
+}
+
+.workspaces {
+  padding: 5px;
+
+  &.current * {
+    font-size: 18;
+    color: #89b4fa;
+  }
+
+  &.occupied {
+    font-size: 15;
+    color: #b4befe;
+  }
+
+  &.empty {
+    font-size: 15;
+    color: #313244;
+  }
+}
+
+.title {
+  font-size: 15;
+  color: #cdd6f4;
+}
