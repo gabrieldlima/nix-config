@@ -26,7 +26,7 @@
         width = 1910;
 
         # Modules that will be displayed on the left, center and right
-        modules-left = ["image"];
+        modules-left = [ "image" "hyprland/window" ];
         modules-center = [];
         modules-right = ["clock"];
 
@@ -55,6 +55,10 @@
         image = {
           path = "/home/gabriel/.config/waybar/logo.png";
           size = 24;
+        };
+
+        "hyprland/window" = {
+          format = "{title}";
         };
       };
     };
