@@ -19,7 +19,7 @@
       # Mouse
       url_color      = "#F5E0DC";
       copy_on_select = true;
-      open_url_with = "qutebrowser";
+      open_url_with  = "qutebrowser";
 
       # Terminal bell
       enable_audio_bell = false;
