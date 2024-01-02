@@ -18,6 +18,7 @@
   ];
   home.packages = with pkgs; [
     _1password-gui
+    anki
     discord
     fd
     gimp
