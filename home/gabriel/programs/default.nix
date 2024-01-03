@@ -23,6 +23,7 @@
     fd
     gimp
     hyprpaper
+    hyprpicker
     jq
     neovim
     obsidian
