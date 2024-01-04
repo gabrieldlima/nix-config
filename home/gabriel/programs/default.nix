@@ -27,6 +27,7 @@
     jq
     neovim
     obsidian
+    obinskit
     rofi
     socat
     sxiv
