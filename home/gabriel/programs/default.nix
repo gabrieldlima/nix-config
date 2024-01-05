@@ -7,6 +7,7 @@
     ./eww
     ./eza.nix
     ./fish.nix
+    ./foot.nix
     ./fzf.nix
     ./git.nix
     ./kitty.nix
