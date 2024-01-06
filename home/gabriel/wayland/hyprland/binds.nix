@@ -22,7 +22,7 @@
     # Variables
     "$browser" = "qutebrowser";
     "$launcher" = "rofi -show drun";
-    "$terminal" = "kitty";
+    "$terminal" = "foot";
 
     # Set the modKey
     "$modKey" = "SUPER";
