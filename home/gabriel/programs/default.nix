@@ -10,7 +10,7 @@
     ./foot.nix
     ./fzf.nix
     ./git.nix
-    ./kitty.nix
+    # ./kitty.nix
     ./qutebrowser.nix
     ./starship.nix
     ./tmux.nix
