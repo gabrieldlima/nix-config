@@ -35,6 +35,7 @@ in
     enable = true;
 
     quickmarks = {
+			chatgpt      = "https://chat.openai.com/";
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
       hacker_news  = "https://news.ycombinator.com/";
