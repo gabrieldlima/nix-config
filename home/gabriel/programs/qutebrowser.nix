@@ -37,6 +37,7 @@ in
     quickmarks = {
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
+      hacker_news  = "https://news.ycombinator.com/";
       nixpkgs      = "https://search.nixos.org/packages";
       home-manager = "https://nix-community.github.io/home-manager/options.xhtml";
       reddit       = "https://www.reddit.com/";
