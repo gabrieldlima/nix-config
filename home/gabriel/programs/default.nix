@@ -29,6 +29,7 @@
     neovim
     obsidian
     obinskit
+    ripgrep
     rofi
     socat
     sxiv
