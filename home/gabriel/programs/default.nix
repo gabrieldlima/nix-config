@@ -23,6 +23,7 @@
     discord
     fd
     gimp
+    gnumake
     hyprpaper
     hyprpicker
     jq
