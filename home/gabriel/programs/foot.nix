@@ -28,7 +28,7 @@
       };
 
       colors = {
-        alpha = "0.9";
+        alpha = "0.95";
         foreground = "cdd6f4"; # Text
         background = "050508"; # Base
 
