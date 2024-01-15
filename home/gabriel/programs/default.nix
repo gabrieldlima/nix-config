@@ -34,6 +34,7 @@
     rofi
     socat
     sxiv
+    unzip
     xdg-desktop-portal-hyprland
   ];
 }
