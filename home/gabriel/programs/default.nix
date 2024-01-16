@@ -13,6 +13,7 @@
     # ./kitty.nix
     ./qutebrowser.nix
     ./starship.nix
+    ./steam.nix
     ./tmux.nix
     # ./wezterm.nix
     ./zathura.nix
