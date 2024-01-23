@@ -101,8 +101,6 @@
       "$modKey SHIFT, Tab, cyclenext, prev"
       "$modKey SHIFT, Tab, bringactivetotop"
 
-      # Move/resize windows with modKey + LMB/RMB and dragging
-      "$modKey, mouse:272, movewindow"
 
       # Scroll through workspaces with $modKey + mouse sideup/sidedown
       "$modKey, mouse:276, workspace, +1"
@@ -111,6 +109,12 @@
       # Scroll through existing workspaces with $modKey + scroll
       "$modKey, mouse_down, workspace, e+1"
       "$modKey, mouse_up, workspace, e-1"
+    ];
+
+    bindm = [
+      # Move/resize windows with modKey + LMB/RMB and dragging
+      "$modKey, mouse:272, movewindow"
+      "$modKey, mouse:273, resizewindow"
     ];
   };
 }
