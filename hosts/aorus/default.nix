@@ -56,12 +56,12 @@
 
   # Enable the X11 windowing system
   services.xserver = {
-    enable = false;
+    enable = true;
     videoDrivers = [ "amdgpu" ];
     displayManager = {
-      startx.enable = false;
+      startx.enable = true;
     };
-    wacom.enable = false;
+    wacom.enable = true;
   };
 
   hardware.opengl = {
@@ -69,7 +69,7 @@
     driSupport = true;
     driSupport32Bit = true;
   };
-  hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver.enable = false;
 
   # Enable the Pulseaudio sound server
 	sound.enable = true;
