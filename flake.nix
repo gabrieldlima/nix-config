@@ -12,7 +12,7 @@
     };
 
     # Hyprland
-    hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = {
@@ -43,8 +43,8 @@
         # > Our main home-manager configuration file <
         modules = [
           ./home/gabriel/home.nix
-          hyprland.homeManagerModules.default
-          { wayland.windowManager.hyprland.enable = true; }
+          # hyprland.homeManagerModules.default
+          # { wayland.windowManager.hyprland.enable = true; }
         ];
       };
     };

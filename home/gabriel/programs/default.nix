@@ -4,17 +4,16 @@
 }: {
   imports = [
     ./bat.nix
-    ./eww
     ./eza.nix
     ./fish.nix
     ./fzf.nix
     ./git.nix
-    # ./kitty.nix
+    ./kitty.nix
     ./qutebrowser.nix
     ./starship.nix
     ./steam.nix
     ./tmux.nix
-    # ./wezterm.nix
+    ./wezterm.nix
     ./zathura.nix
   ];
   home.packages = with pkgs; [

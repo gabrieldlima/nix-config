@@ -7,7 +7,7 @@
   #   target = ".config/waybar/logo.png";
   # };
   programs.waybar = {
-    enable = false;
+    enable = true;
 
     # JSON
     settings = {
