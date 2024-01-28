@@ -3,8 +3,9 @@
   ...
 }: {
   imports = [
-    # ./picom.nix
+    ./awesome.nix
+    ./picom.nix
     # ./xmonad
-    # ./xresources.nix
+    ./xresources.nix
   ];
 }
