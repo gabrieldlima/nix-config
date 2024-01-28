@@ -7,7 +7,6 @@
     ./eww
     ./eza.nix
     ./fish.nix
-    ./foot.nix
     ./fzf.nix
     ./git.nix
     # ./kitty.nix
@@ -25,17 +24,15 @@
     fd
     gimp
     gnumake
-    hyprpaper
-    hyprpicker
     jq
     neovim
-    obsidian
     obinskit
+    obsidian
     ripgrep
     rofi
+    scrot
     socat
     sxiv
     unzip
-    xdg-desktop-portal-hyprland
   ];
 }
