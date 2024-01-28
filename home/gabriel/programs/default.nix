@@ -33,5 +33,6 @@
     socat
     sxiv
     unzip
+    xwallpaper
   ];
 }
