@@ -328,8 +328,6 @@
         disable_hyprland_logo = true;
         # disables the hyprland splash rendering. (requires a monitor reload to take effect)
         disable_splash_rendering = false;
-        # makes the background always have hypr-chan, the hyprland mascot
-        force_hypr_chan = false;
         # Enforce any of the 3 default wallpapers. Setting this to 0 disables the anime background. -1 means “random”
         force_default_wallpaper = -1;
         # controls the VFR status of hyprland. Heavily recommended to leave on true to conserve resources
