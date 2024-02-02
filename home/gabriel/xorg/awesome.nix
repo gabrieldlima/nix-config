@@ -20,7 +20,7 @@ let
   });
 in {
   xsession.windowManager.awesome = {
-    enable = false;
+    enable = true;
     package = awesome;
   };
 }
