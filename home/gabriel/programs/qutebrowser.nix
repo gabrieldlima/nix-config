@@ -32,7 +32,7 @@ let
 in
 {
   programs.qutebrowser = {
-    enable = true;
+    enable = false;
 
     quickmarks = {
 			chatgpt      = "https://chat.openai.com/";
