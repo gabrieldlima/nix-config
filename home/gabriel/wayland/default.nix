@@ -3,7 +3,6 @@
   ...
 }: {
   imports = [
-    ./eww
     ./foot.nix
     ./hyprland
     # ./waybar.nix
