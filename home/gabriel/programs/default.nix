@@ -3,6 +3,7 @@
   ...
 }: {
   imports = [
+    ./ags.nix
     ./bat.nix
     ./eza.nix
     ./firefox.nix
