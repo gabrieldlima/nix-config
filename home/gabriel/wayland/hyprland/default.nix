@@ -345,7 +345,7 @@
         # If true, will animate manual window resizes/moves
         animate_manual_resizes = true;
         # If true, will animate windows being dragged by mouse, note that this can cause weird behavior on some curves
-        animate_mouse_windowdragging = true;
+        animate_mouse_windowdragging = false;
         # If true, the config will not reload automatically on save, and instead needs to be reloaded with hyprctl reload. Might save on battery.
         disable_autoreload = false;
         # Enable window swallowing
