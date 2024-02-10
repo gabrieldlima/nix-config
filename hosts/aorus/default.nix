@@ -80,7 +80,7 @@
     gabriel = {
       description = "Gabriel Lima";
       isNormalUser = true;
-      extraGroups = [ "wheel" "libvirtd" ];
+      extraGroups = [ "wheel" "libvirtd" "gamemode" ];
     };
   };
 
@@ -110,6 +110,10 @@
     enable = true;
     powerOnBoot = true;
   };
+
+  # Gamemode
+  programs.gamemode.enable = true;
+  programs.gamemode.settings.general.inhibit_screensaver = 0;
 
   # NixOS release
   system.stateVersion = "23.11";
