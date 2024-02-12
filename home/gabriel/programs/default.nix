@@ -19,11 +19,9 @@
     ./zathura.nix
   ];
   home.packages = with pkgs; [
-    _1password-gui
     anki
-    discord
+    brave
     fd
-    gimp
     gnumake
     jq
     neovim
@@ -31,10 +29,7 @@
     obsidian
     ripgrep
     rofi
-    scrot
     socat
-    sxiv
     unzip
-    xwallpaper
   ];
 }
