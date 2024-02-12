@@ -3,7 +3,7 @@
   ...
 }: {
   programs.wezterm = {
-    enable = true;
+    enable = false;
     colorSchemes = {
       catppuccinMocha = {
         ansi = [
