@@ -3,7 +3,7 @@
   ...
 }: {
   programs.firefox = {
-    enable = true;
+    enable = false;
     enableGnomeExtensions = false;
     package = pkgs.firefox;
     policies = {
