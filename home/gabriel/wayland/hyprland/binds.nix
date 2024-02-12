@@ -20,7 +20,7 @@
     };
 
     # Variables
-    "$browser" = "firefox";
+    "$browser" = "brave";
     "$launcher" = "rofi -show drun";
     "$terminal" = "foot";
 
