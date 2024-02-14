@@ -11,6 +11,7 @@
     ./fzf.nix
     ./git.nix
     ./kitty.nix
+    ./mangohud.nix
     ./qutebrowser.nix
     ./starship.nix
     ./steam.nix
@@ -25,7 +26,7 @@
     gnumake
     jq
     neovim
-    obinskit
+    # obinskit
     obsidian
     ripgrep
     rofi

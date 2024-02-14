@@ -9,6 +9,5 @@ in
 {
   home.packages = with pkgs; [
     steam-with-packages
-    mangohud
   ];
 }
