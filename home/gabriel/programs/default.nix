@@ -20,17 +20,18 @@
     ./zathura.nix
   ];
   home.packages = with pkgs; [
+    # obinskit
     anki
     brave
     fd
     gnumake
     jq
     neovim
-    # obinskit
     obsidian
     ripgrep
     rofi
     socat
     unzip
+    wget
   ];
 }
