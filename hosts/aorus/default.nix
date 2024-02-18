@@ -115,6 +115,8 @@
   programs.gamemode.enable = true;
   programs.gamemode.settings.general.inhibit_screensaver = 0;
 
+  programs.nix-ld.enable = true;
+
   # NixOS release
   system.stateVersion = "23.11";
 }
