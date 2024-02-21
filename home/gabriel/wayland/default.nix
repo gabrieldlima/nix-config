@@ -8,7 +8,7 @@
     # ./waybar.nix
   ];
   home.packages = with pkgs; [
-    hyprpaper
+    swww
     hyprpicker
     xdg-desktop-portal-hyprland
   ];

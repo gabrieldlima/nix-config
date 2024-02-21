@@ -55,7 +55,7 @@
 
       # will execute only on launch
       exec-once = [
-        "hyprpaper"
+        "swww init"
         "ags"
         "openrgb -d 0 -m off"
         "openrgb -d 1 -m off"
