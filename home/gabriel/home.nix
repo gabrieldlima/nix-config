@@ -31,8 +31,8 @@
     homeDirectory = "/home/gabriel";
 
     pointerCursor = {
-      name = "Catppuccin-Mocha-Light-Cursors";
-      package = pkgs.catppuccin-cursors.mochaLight;
+      name = "GoogleDot-White";
+      package = pkgs.google-cursor;
       size = 24;
       x11 = {
         enable = false;
