@@ -22,7 +22,7 @@
     # Variables
     "$browser" = "brave";
     "$launcher" = "rofi -show drun";
-    "$terminal" = "wezterm";
+    "$terminal" = "foot";
 
     # Set the modKey
     "$modKey" = "SUPER";
