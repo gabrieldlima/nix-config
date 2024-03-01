@@ -13,6 +13,9 @@
 
     # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
+
+    # AGS
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = {
