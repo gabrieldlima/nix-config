@@ -55,6 +55,7 @@
 
       # will execute only on launch
       exec-once = [
+        "ags --config $HOME/nix-config/home/gabriel/wayland/ags/config.js"
         "swww init"
         "openrgb -d 0 -m off"
         "openrgb -d 1 -m off"

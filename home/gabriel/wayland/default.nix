@@ -3,7 +3,6 @@
   ...
 }: {
   imports = [
-    ./ags
     ./foot.nix
     ./hyprland
     # ./waybar.nix
