@@ -31,7 +31,7 @@
     homeDirectory = "/home/gabriel";
 
     pointerCursor = {
-      name = "GoogleDot-White";
+      name = "GoogleDot-Black";
       package = pkgs.google-cursor;
       size = 24;
       x11 = {
