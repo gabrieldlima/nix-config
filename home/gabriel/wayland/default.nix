@@ -5,7 +5,7 @@
   imports = [
     ./foot.nix
     ./hyprland
-    # ./waybar.nix
+    ./waybar.nix
   ];
   home.packages = with pkgs; [
     swww

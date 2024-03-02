@@ -2,10 +2,10 @@
   pkgs,
   ...
 }: {
-  # home.file."logo.png" = {
-  #   source = ./logo.png;
-  #   target = ".config/waybar/logo.png";
-  # };
+  home.file."logo.png" = {
+    source = ./logo.png;
+    target = ".config/waybar/logo.png";
+  };
   programs.waybar = {
     enable = true;
 
@@ -16,22 +16,22 @@
         layer = "bottom";
         # Which output (monitor), the bar should appear
         output = [
-          "HDMI-A-2"
+          "HDMI-A-1"
         ];
         # Bar position, can be top, bottom, left, right
         position = "top";
         # Height to be used by the bar if possible
         height = 30;
         # Width to be used by the bar if possible
-        width = 1910;
+        width = 1920;
 
         # Modules that will be displayed on the left, center and right
-        modules-left = [ "hyprland/window" ];
+        modules-left = [ "image" "hyprland/window" ];
         modules-center = [];
         modules-right = ["clock"];
 
         # Margins value using the css format without units
-        margin-top = 5;
+        margin-top = 0;
         # Size of gaps in between of the different modules
         spacing = 4;
         # Optional name added as a CSS class, for styling multiples waybars
@@ -52,10 +52,10 @@
           tooltip-format = "{:%A, %B %d}";
         };
 
-        # image = {
-        #   path = "/home/gabriel/.config/waybar/logo.png";
-        #   size = 24;
-        # };
+        image = {
+          path = "/home/gabriel/.config/waybar/logo.png";
+          size = 24;
+        };
 
         "hyprland/window" = {
           format = "{title}";
@@ -67,9 +67,9 @@
     style = ''
       * {
         font-family: Vanilla Caramel;
-        color: #cdd6f4;
-        background: #050508;
-        border-radius: 10px;
+        color: @theme_text_color;
+        background: @theme_base_color;
+        border-radius: 0px;
         padding-left: 1px;
         padding-right: 1px;
       }
