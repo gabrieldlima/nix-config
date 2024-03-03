@@ -9,6 +9,7 @@
     ./fish.nix
     ./fzf.nix
     ./git.nix
+    # ./hyprland
     ./kitty.nix
     ./mangohud.nix
     ./qutebrowser.nix
@@ -29,7 +30,6 @@
     obsidian
     ripgrep
     rofi
-    socat
     unzip
     wget
   ];

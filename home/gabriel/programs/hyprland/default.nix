@@ -13,6 +13,15 @@
 }: {
   imports = [
     ./binds.nix
+    ./waybar.nix
+  ];
+
+  # Hyprland specific deps
+  home.packages = with pkgs; [
+    hyprpicker
+    socat
+    swww
+    xdg-desktop-portal-hyprland
   ];
 
   wayland.windowManager.hyprland = {

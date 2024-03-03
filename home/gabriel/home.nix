@@ -16,8 +16,6 @@
 }: {
   imports = [
     ./programs
-    ./wayland
-    ./xorg
   ];
 
   nixpkgs = {
