@@ -34,6 +34,7 @@
     obsidian
     ripgrep
     rofi
+    scrot
     unzip
     wget
   ];
