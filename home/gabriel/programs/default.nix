@@ -24,9 +24,10 @@
     ./zathura.nix
   ];
   home.packages = with pkgs; [
+    _1password-gui
     # obinskit
     anki
-    brave
+    # brave
     fd
     gnumake
     jq
