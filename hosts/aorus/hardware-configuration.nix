@@ -23,9 +23,11 @@
       fsType = "btrfs";
     };
 
-  fileSystems."/media/ssd" =
-    { device = "/dev/disk/by-label/ssd";
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-label/nixstore";
       fsType = "btrfs";
+      neededForBoot = true;
+      options = [ "noatime" ];
     };
 
   fileSystems."/media/hdd" =
