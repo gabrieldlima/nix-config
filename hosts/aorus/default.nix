@@ -11,6 +11,19 @@
 
   # Nix settings
   nix = {
+    # Store optimization
+    optimise = {
+      automatic = true;
+      dates = [ "13:00" ];
+    };
+
+    # Garbage collection
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+
     # This will add each flake input as a registry
     # To make nix3 commands consistent with your flake
     registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
