@@ -26,17 +26,14 @@
   ];
   home.packages = with pkgs; [
     _1password-gui
-    # obinskit
-    anki
-    # brave
     fd
     gnumake
     jq
     neovim
     obsidian
     ripgrep
-    rofi
     scrot
+    sxiv
     unzip
     wget
     xwallpaper

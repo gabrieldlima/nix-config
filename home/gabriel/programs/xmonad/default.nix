@@ -5,9 +5,6 @@
   imports = [
     ./xmobar.nix
   ];
-  home.packages = with pkgs; [
-    scrot
-  ];
 
   xsession.windowManager.xmonad = {
     enable = true;
