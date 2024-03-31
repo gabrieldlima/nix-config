@@ -35,12 +35,13 @@ in
     enable = true;
 
     quickmarks = {
+      awesomewm    = "https://awesomewm.org/apidoc/";
 			chatgpt      = "https://chat.openai.com/";
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
       hacker_news  = "https://news.ycombinator.com/";
-      nixpkgs      = "https://search.nixos.org/packages";
       home-manager = "https://nix-community.github.io/home-manager/options.xhtml";
+      nixpkgs      = "https://search.nixos.org/packages";
       reddit       = "https://www.reddit.com/";
       youtube      = "https://www.youtube.com/";
     };
