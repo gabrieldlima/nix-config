@@ -7,6 +7,7 @@
     # ./xmonad
     ./awesome.nix
     ./bat.nix
+    ./bash.nix
     ./eza.nix
     ./firefox.nix
     ./fish.nix
