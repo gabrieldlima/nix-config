@@ -31,9 +31,11 @@
     pointerCursor = {
       name = "GoogleDot-Black";
       package = pkgs.google-cursor;
-      size = 24;
+      size = 16;
+      gtk.enable = true;
       x11 = {
-        enable = false;
+        enable = true;
+        defaultCursor = "left_ptr";
       };
     };
   };
