@@ -27,6 +27,7 @@
   home.packages = with pkgs; [
     _1password-gui
     fd
+    gimp
     gnumake
     jq
     neovim
