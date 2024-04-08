@@ -26,7 +26,7 @@
           "#94e2d5"
           "#a6adc8"
         ];
-        background = "#050508";
+        background = "#010101";
         compose_cursor = "#f2cdcd";
         cursor_bg = "#f5e0dc";
         cursor_border = "#f5e0dc";
