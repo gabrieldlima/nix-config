@@ -26,9 +26,9 @@ let
   surface2  = "#585b70";
   surface1  = "#45475a";
   surface0  = "#313244";
-  base      = "#050508";
-  mantle    = "#050508";
-  crust     = "#050508";
+  base      = "#010101";
+  mantle    = "#010101";
+  crust     = "#010101";
 in
 {
   programs.qutebrowser = {
