@@ -56,6 +56,10 @@ in
         default_size   = "10pt";
       };
 
+      tabs = {
+        show = "switching";
+      };
+
       colors = {
         completion = {
           category.bg                 = "${base}";
