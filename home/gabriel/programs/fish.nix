@@ -44,6 +44,7 @@
 
       # Misc
       cat = "bat";
+      df = "duf";
     };
     plugins = [
       # Pure-fish z directory jumping
