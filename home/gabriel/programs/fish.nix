@@ -43,6 +43,7 @@
       lt = "eza --tree";
 
       # Misc
+      t = "tldr";
       cat = "bat";
       df = "duf";
     };
