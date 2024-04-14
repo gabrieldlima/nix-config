@@ -60,6 +60,10 @@ in
         show = "multiple";
       };
 
+      downloads = {
+        position = "bottom";
+      };
+
       colors = {
         completion = {
           category.bg                 = "${base}";
