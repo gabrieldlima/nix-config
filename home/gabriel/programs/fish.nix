@@ -41,6 +41,9 @@
       ll = "eza -l";
       la = "eza -la";
       lt = "eza --tree";
+
+      # Misc
+      cat = "bat";
     };
     plugins = [
       # Pure-fish z directory jumping
