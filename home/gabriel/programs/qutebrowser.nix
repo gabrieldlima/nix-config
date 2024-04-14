@@ -57,7 +57,7 @@ in
       };
 
       tabs = {
-        show = "switching";
+        show = "multiple";
       };
 
       colors = {
@@ -151,16 +151,16 @@ in
 
         tabs = {
           bar.bg           = "${crust}";
-          even.bg          = "${surface2}";
-          odd.bg           = "${surface1}";
-          even.fg          = "${overlay2}";
-          odd.fg           = "${overlay2}";
+          even.bg          = "${crust}";
+          odd.bg           = "${crust}";
+          even.fg          = "${text}";
+          odd.fg           = "${text}";
           indicator.error  = "${red}";
           indicator.system = "none";
-          selected.even.bg = "${base}";
-          selected.odd.bg  = "${base}";
-          selected.even.fg = "${text}";
-          selected.odd.fg  = "${text}";
+          selected.even.bg = "${blue}";
+          selected.odd.bg  = "${blue}";
+          selected.even.fg = "${crust}";
+          selected.odd.fg  = "${crust}";
         };
 
         contextmenu = {
