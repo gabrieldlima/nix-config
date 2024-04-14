@@ -36,6 +36,7 @@
     ripgrep
     scrot
     sxiv
+    tldr
     unzip
     wget
     xwallpaper
