@@ -5,6 +5,7 @@
   imports = [
     # ./hyprland
     # ./xmonad
+    ./atuin.nix
     ./awesome.nix
     ./bat.nix
     ./bash.nix

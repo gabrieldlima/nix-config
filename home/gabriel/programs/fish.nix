@@ -6,6 +6,7 @@
     enable = true;
     interactiveShellInit = ''
       starship init fish | source
+      atuin init fish | source
 
       bind \cg expand-abbr
       bind \cw backward-kill-word
