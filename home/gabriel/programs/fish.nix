@@ -8,6 +8,16 @@
     functions = {
       fish_greeting = "";
     };
+    shellAbbrs = {
+      g = "git";
+      ga = "git add";
+      gs = "git status";
+      gd = "git diff";
+      gc = "git commit -m";
+      gl = "git log";
+      gps = "git push -u origin";
+      gpl = "git pull";
+    };
     plugins = [
       # Pure-fish z directory jumping
       {
