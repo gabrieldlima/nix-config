@@ -4,11 +4,29 @@
 }: {
   programs.fish = {
     enable = true;
-    interactiveShellInit = "starship init fish | source";
+    interactiveShellInit = ''
+      starship init fish | source
+
+      bind \cg expand-abbr
+      bind \cw backward-kill-word
+    '';
     functions = {
       fish_greeting = "";
     };
     shellAbbrs = {
+      # Nix commands
+      nr = "nix run nixpkgs#";
+      ns = "nix shell nixpkgs#";
+      ncg = "nix-collect-garbage --delete-old";
+      nrs = "sudo nixos-rebuild switch --flake";
+
+      # Home-Manager commands
+      hms = "home-manager switch --flake";
+      hmp = "home-manager packages";
+      hmg = "home-manager generations";
+      hmr = "home-manager remove-generations";
+
+      # Git commands
       g = "git";
       ga = "git add";
       gs = "git status";
