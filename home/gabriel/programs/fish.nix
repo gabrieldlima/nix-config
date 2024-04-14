@@ -35,6 +35,12 @@
       gl = "git log";
       gps = "git push -u origin";
       gpl = "git pull";
+
+      # List commands
+      ls = "eza -l";
+      ll = "eza -l";
+      la = "eza -la";
+      lt = "eza --tree";
     };
     plugins = [
       # Pure-fish z directory jumping
