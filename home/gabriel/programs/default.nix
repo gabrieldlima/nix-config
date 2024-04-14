@@ -26,6 +26,7 @@
   ];
   home.packages = with pkgs; [
     _1password-gui
+    duf
     fd
     gimp
     gnumake
