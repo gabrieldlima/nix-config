@@ -36,7 +36,7 @@ in
 
     quickmarks = {
       awesomewm    = "https://awesomewm.org/apidoc/";
-			chatgpt      = "https://chat.openai.com/";
+      chatgpt      = "https://chat.openai.com/";
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
       gmail        = "https://mail.google.com/mail/";
@@ -44,6 +44,7 @@ in
       home-manager = "https://nix-community.github.io/home-manager/options.xhtml";
       nixpkgs      = "https://search.nixos.org/packages";
       reddit       = "https://www.reddit.com/";
+      sicp         = "https://sarabander.github.io/sicp/html/index.xhtml#SEC_Contents";
       translate    = "https://translate.google.com/";
       twitch       = "https://www.twitch.tv/";
       twitter      = "https://twitter.com/home/";
