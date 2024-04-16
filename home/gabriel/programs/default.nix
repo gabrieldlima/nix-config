@@ -40,6 +40,7 @@
     tldr
     unzip
     wget
+    xsel
     xwallpaper
   ];
 }
