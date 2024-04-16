@@ -28,6 +28,8 @@
       ".4" = "cd ../../../..";
       ".5" = "cd ../../../../..";
 
+      # Misc
+      tk  = "cat $HOME/.config/tk | xsel -ib";
       cat = "bat";
     };
     shellAbbrs = {
