@@ -15,6 +15,12 @@
       fish_greeting = "";
     };
     shellAbbrs = {
+      # Best editor ever
+      n = "nvim";
+      vi = "nvim";
+      vim = "nvim";
+      nano = "nvim";
+
       # Nix commands
       nr = "nix run nixpkgs#";
       ns = "nix shell nixpkgs#";
