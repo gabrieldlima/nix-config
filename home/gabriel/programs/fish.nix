@@ -44,14 +44,16 @@
       hmr = "home-manager remove-generations";
 
       # Git commands
-      ga = "git add";
+      ga  = "git add";
+      gc  = "git commit";
+      gl  = "git log";
       gst = "git status";
       gsh = "git show";
-      gd = "git diff";
-      gc = "git commit";
-      gl = "git log";
-      gps = "git push -u origin main";
+      gd  = "git diff";
+      gds = "git diff --staged";
+      gdc = "git diff --check";
       gpl = "git pull";
+      gps = "git push -u origin main";
 
       # Best editor ever
       n = "nvim";
