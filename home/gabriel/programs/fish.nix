@@ -14,13 +14,23 @@
     functions = {
       fish_greeting = "";
     };
-    shellAbbrs = {
-      # Best editor ever
-      n = "nvim";
-      vi = "nvim";
-      vim = "nvim";
-      nano = "nvim";
+    shellAliases = {
+      # List commands
+      ls = "eza -l";
+      ll = "eza -l";
+      la = "eza -la";
+      lt = "eza --tree";
 
+      # Change dirs
+      ".1" = "cd ..";
+      ".2" = "cd ../..";
+      ".3" = "cd ../../..";
+      ".4" = "cd ../../../..";
+      ".5" = "cd ../../../../..";
+
+      cat = "bat";
+    };
+    shellAbbrs = {
       # Nix commands
       nr = "nix run nixpkgs#";
       ns = "nix shell nixpkgs#";
@@ -34,24 +44,23 @@
       hmr = "home-manager remove-generations";
 
       # Git commands
-      g = "git";
       ga = "git add";
-      gs = "git status";
+      gst = "git status";
+      gsh = "git show";
       gd = "git diff";
-      gc = "git commit -m";
+      gc = "git commit";
       gl = "git log";
-      gps = "git push -u origin";
+      gps = "git push -u origin main";
       gpl = "git pull";
 
-      # List commands
-      ls = "eza -l";
-      ll = "eza -l";
-      la = "eza -la";
-      lt = "eza --tree";
+      # Best editor ever
+      n = "nvim";
+      vi = "nvim";
+      vim = "nvim";
+      nano = "nvim";
 
       # Misc
       t = "tldr";
-      cat = "bat";
       df = "duf";
     };
     plugins = [
