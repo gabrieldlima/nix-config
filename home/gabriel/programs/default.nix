@@ -36,6 +36,7 @@
     neovim
     obsidian
     ripgrep
+    rofi
     #scrot
     #sxiv
     tldr
