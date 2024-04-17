@@ -69,12 +69,12 @@
 
   # Enable the X11 windowing system
   services.xserver = {
-    enable = true;
+    enable = false;
     videoDrivers = [ "amdgpu" ];
     displayManager = {
-      startx.enable = true;
+      startx.enable = false;
     };
-    wacom.enable = true;
+    wacom.enable = false;
   };
 
   hardware.opengl = {
@@ -82,11 +82,11 @@
     driSupport = true;
     driSupport32Bit = true;
   };
-  hardware.opentabletdriver.enable = false;
+  hardware.opentabletdriver.enable = true;
 
   # Enable the Pulseaudio sound server
-	sound.enable = true;
-	hardware.pulseaudio.enable = true;
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   # Additional user accounts to be created automatically by the system
   users.users = {
@@ -125,7 +125,7 @@
   };
 
   # Gamemode
-  programs.gamemode.enable = true;
+  programs.gamemode.enable = false;
   programs.gamemode.settings.general.inhibit_screensaver = 0;
 
   programs.nix-ld.enable = true;
