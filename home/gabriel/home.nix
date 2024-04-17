@@ -34,8 +34,8 @@
       size = 16;
       gtk.enable = true;
       x11 = {
-        enable = true;
-        defaultCursor = "left_ptr";
+       enable = false;
+       defaultCursor = "left_ptr";
       };
     };
   };
