@@ -20,9 +20,9 @@
     };
 
     # Variables
-    "$browser" = "brave";
+    "$browser" = "qutebrowser";
     "$launcher" = "rofi -show drun";
-    "$terminal" = "foot";
+    "$terminal" = "alacritty";
 
     # Set the modKey
     "$modKey" = "SUPER";
