@@ -3,17 +3,19 @@
   ...
 }: {
   imports = [
-    # ./hyprland
+    # ./awesome.nix
     # ./xmonad
+    # ./xresources.nix
+    ./alacritty.nix
     ./atuin.nix
-    ./awesome.nix
-    ./bat.nix
     ./bash.nix
+    ./bat.nix
     ./eza.nix
     ./firefox.nix
     ./fish.nix
     ./fzf.nix
     ./git.nix
+    ./hyprland
     ./kitty.nix
     ./mangohud.nix
     ./picom.nix
@@ -22,7 +24,6 @@
     ./steam.nix
     ./tmux.nix
     ./wezterm.nix
-    ./xresources.nix
     ./zathura.nix
   ];
   home.packages = with pkgs; [
@@ -35,12 +36,12 @@
     neovim
     obsidian
     ripgrep
-    scrot
-    sxiv
+    #scrot
+    #sxiv
     tldr
     unzip
     wget
-    xsel
-    xwallpaper
+    #xsel
+    #xwallpaper
   ];
 }
