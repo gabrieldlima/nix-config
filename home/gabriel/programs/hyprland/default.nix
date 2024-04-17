@@ -261,32 +261,32 @@
       ###############################################################################
       # Gestures
       ###############################################################################
-      gestures = {
-        # enable workspace swipe gesture
-        workspace_swipe = false;
-        # how many fingers for the gesture
-        workspace_swipe_fingers = 3;
-        # in px, the distance of the gesture
-        workspace_swipe_distance = 300;
-        #invert the direction
-        workspace_swipe_invert = true;
-        # minimum speed in px per timepoint to force the change ignoring cancel_ratio. Setting to 0 will disable this mechanic
-        workspace_swipe_min_speed_to_force = 30;
-        # how much the swipe has to proceed in order to commence it
-        workspace_swipe_cancel_ratio = 0.5;
-        # whether a swipe right on the last workspace should create a new one
-        workspace_swipe_create_new = true;
-        # if enabled, switching direction will be locked when you swipe past the direction_lock_threshold
-        workspace_swipe_direction_lock = true;
-        # in px, the distance to swipe before direction lock activates
-        workspace_swipe_direction_lock_threshold = 10;
-        # if enabled, swiping will not clamp at the neighboring workspaces but continue to the further ones
-        workspace_swipe_forever = false;
-        # if enabled, swiping will swipe on consecutive numbered workspaces
-        workspace_swipe_numbered = false;
-        # if enabled, swiping will use the r prefix instead of the m prefix for finding workspaces. (requires disabled workspace_swipe_numbered)
-        workspace_swipe_use_r = false;
-      };
+      # gestures = {
+      #   # enable workspace swipe gesture
+      #   workspace_swipe = false;
+      #   # how many fingers for the gesture
+      #   workspace_swipe_fingers = 3;
+      #   # in px, the distance of the gesture
+      #   workspace_swipe_distance = 300;
+      #   #invert the direction
+      #   workspace_swipe_invert = true;
+      #   # minimum speed in px per timepoint to force the change ignoring cancel_ratio. Setting to 0 will disable this mechanic
+      #   workspace_swipe_min_speed_to_force = 30;
+      #   # how much the swipe has to proceed in order to commence it
+      #   workspace_swipe_cancel_ratio = 0.5;
+      #   # whether a swipe right on the last workspace should create a new one
+      #   workspace_swipe_create_new = true;
+      #   # if enabled, switching direction will be locked when you swipe past the direction_lock_threshold
+      #   workspace_swipe_direction_lock = true;
+      #   # in px, the distance to swipe before direction lock activates
+      #   workspace_swipe_direction_lock_threshold = 10;
+      #   # if enabled, swiping will not clamp at the neighboring workspaces but continue to the further ones
+      #   workspace_swipe_forever = false;
+      #   # if enabled, swiping will swipe on consecutive numbered workspaces
+      #   workspace_swipe_numbered = false;
+      #   # if enabled, swiping will use the r prefix instead of the m prefix for finding workspaces. (requires disabled workspace_swipe_numbered)
+      #   workspace_swipe_use_r = false;
+      # };
 
       ###############################################################################
       # Group
