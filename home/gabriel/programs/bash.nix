@@ -7,9 +7,9 @@
 
   # Extra commands that should be run when initializing a login shell.
   profileExtra = ''
-    if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-      exec startx $(which awesome)
-    fi
+   if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+     exec Hyprland
+   fi
   '';
 
   # Extra commands that should be run when initializing an interactive shell.
