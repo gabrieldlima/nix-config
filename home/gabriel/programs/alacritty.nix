@@ -107,6 +107,11 @@
           white = "#bac2de";
         };
       };
+
+      # MOUSE
+      mouse = {
+        hide_when_typing = true;
+      };
     };
   };
 }
