@@ -24,6 +24,7 @@
     ./steam.nix
     ./tmux.nix
     ./wezterm.nix
+    ./yazi.nix
     ./zathura.nix
   ];
   home.packages = with pkgs; [
