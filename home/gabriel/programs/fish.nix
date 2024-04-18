@@ -13,6 +13,17 @@
     '';
     functions = {
       fish_greeting = "";
+
+      # This shell wrapper provides the ability to change the current working
+      # directory when exiting Yazi.
+      yy = ''
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+          cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
+      '';
     };
     shellAliases = {
       # List commands
