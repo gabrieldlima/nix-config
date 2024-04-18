@@ -31,6 +31,7 @@
     _1password-gui
     duf
     fd
+    file
     gimp
     gnumake
     jq
