@@ -35,15 +35,15 @@ in
     enable = true;
 
     quickmarks = {
-      awesomewm    = "https://awesomewm.org/apidoc/";
       chatgpt      = "https://chat.openai.com/";
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
       gmail        = "https://mail.google.com/mail/";
-      google      =  "https://www.google.com/";
+      google       =  "https://www.google.com/";
       hacker_news  = "https://news.ycombinator.com/";
       home-manager = "https://nix-community.github.io/home-manager/options.xhtml";
       nixpkgs      = "https://search.nixos.org/packages";
+      hyprland     = "https://wiki.hyprland.org/";
       reddit       = "https://www.reddit.com/";
       sicp         = "https://sarabander.github.io/sicp/html/index.xhtml#SEC_Contents";
       translate    = "https://translate.google.com/";
