@@ -53,7 +53,7 @@
       "$surface2"  = "0xff585b70";
       "$surface1"  = "0xff45475a";
       "$surface0"  = "0xff313244";
-      "$base"      = "0xff050508";
+      "$base"      = "0xff010101";
       "$mantle"    = "0xff181825";
       "$crust"     = "0xff11111b";
 
@@ -75,7 +75,7 @@
       ###############################################################################
       general = {
         # size of border around windows
-        border_size = 2;
+        border_size = 3;
         # disable borders for floating windows
         no_border_on_floating = false;
         # gaps between windows
@@ -83,7 +83,7 @@
         # gaps between windows and monitor edges
         gaps_out = 10;
         # border color for the active window
-        "col.active_border" = "$lavender";
+        "col.active_border" = "$blue";
         # border color for inactive windows
         "col.inactive_border" = "$base";
         # in seconds, after how many seconds of cursor’s inactivity to hide it. Set to 0 for never
@@ -97,9 +97,9 @@
         # if on, will also apply the sensitivity to raw mouse output (e.g. sensitivity in games) NOTICE: really not recommended
         apply_sens_to_raw = false;
         # enables resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = false;
+        resize_on_border = true;
         # extends the area around the border where you can click and drag on, only used when general:resize_on_border is on
-        extend_border_grab_area = 15;
+        extend_border_grab_area = 0;
         # show a cursor icon when hovering over borders, only used when general:resize_on_border is on
         hover_icon_on_border = true;
         # master switch for allowing tearing to occur
