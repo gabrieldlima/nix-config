@@ -1,8 +1,8 @@
 {
-, pkgs
-, ...
+  pkgs,
+  ...
 }: {
-  programs.dunst = {
+  services.dunst = {
     enable = true;
   };
 }
