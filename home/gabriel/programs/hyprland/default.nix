@@ -212,6 +212,8 @@
       input = {
         # Appropriate XKB keymap parameter
         kb_layout = "us";
+        # swap caps-lock and escape
+        kb_options = "caps:swapescape";
         # Engage numlock by default.
         numlock_by_default = false;
         # The repeat rate for held-down keys, in repeats per seconds
