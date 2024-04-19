@@ -194,22 +194,29 @@
         ];
         # Animations are declared with the animation keyword
         # animation = NAME, ONOFF, SPEED, CURVE, STYLE
-        # - NAME:
-            # ↳ global
-                # ↳ windows - styles: slide, popin
-                    # ↳ windowsIn - window open
-                    # ↳ windowsOut - window close
-                    # ↳ windowsMove - everything in between, moving, dragging, resizing.
-            # ↳ fade
-                # ↳ fadeIn - fade in (open) -> layers and windows
-                # ↳ fadeOut - fade out (close) -> layers and windows
-                # ↳ fadeSwitch - fade on changing activewindow and its opacity
-                # ↳ fadeShadow - fade on changing activewindow for shadows
-                # ↳ fadeDim - the easing of the dimming of inactive windows
-            # ↳ border - for animating the border's color switch speed
-            # ↳ borderangle - for animating the border's gradient angle - styles: once (default), loop
-            # ↳ workspaces - styles: slide, slidevert, fade, slidefade, slidefadevert
-            # ↳ specialWorkspace - styles: same as workspaces
+        #
+        # Animation tree:
+        # global
+        #   ↳ windows - styles: slide, popin
+        #     ↳ windowsIn - window open
+        #     ↳ windowsOut - window close
+        #     ↳ windowsMove - everything in between, moving, dragging, resizing.
+        #   ↳ layers - styles: slide, popin, fade
+        #     ↳ layersIn - layer open
+        #     ↳ layersOut - layer close
+        #   ↳ fade
+        #     ↳ fadeIn - fade in for window open
+        #     ↳ fadeOut - fade out for window close
+        #     ↳ fadeSwitch - fade on changing activewindow and its opacity
+        #     ↳ fadeShadow - fade on changing activewindow for shadows
+        #     ↳ fadeDim - the easing of the dimming of inactive windows
+        #     ↳ fadeLayers - for controlling fade on layers
+        #       ↳ fadeLayersIn - fade in for layer open
+        #       ↳ fadeLayersOut - fade out for layer close
+        #   ↳ border - for animating the border's color switch speed
+        #   ↳ borderangle - for animating the border's gradient angle - styles: once (default), loop
+        #   ↳ workspaces - styles: slide, slidevert, fade, slidefade, slidefadevert
+        #     ↳ specialWorkspace - styles: same as workspaces
         # - ONOFF: can be either 0 or 1, 0 to disable, 1 to enable. note: if it’s 0, you can omit further args.
         # - SPEED: is the amount of ds (1ds = 100ms) the animation will take
         # - CURVE: is the bezier curve name
