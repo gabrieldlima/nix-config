@@ -17,6 +17,8 @@
       ignore_group_lock = false;
       # If enabled, when on a fullscreen window, movefocus will cycle fullscreen, if not, it will move the focus in a direction
       movefocus_cycles_fullscreen = true;
+      # If enabled, apps that request keybinds to be disabled (e.g. VMs) will not be able to do so
+      disable_keybind_grabbing = false;
     };
 
     # Variables
