@@ -319,14 +319,20 @@
         "col.border_locked_inactive" = "$base";
 
         groupbar = {
+          # enables groupbars
+          enabled = true;
           # font used to display groupbar titles
-          font_family = "Vanilla Caramel";
+          font_family = "FiraCode Nerd Font Bold";
           # font size for the above
-          font_size = 12;
-          #	whether to draw gradients under the titles of the above
+          font_size = 10;
+          # whether to draw gradients under the titles of the above
           gradients = true;
+          # height of the groupbar
+          height = 15;
+          # sets the decoration priority for groupbars
+          priority = 3;
           # whether to render titles in the group bar decoration
-          render_titles = false;
+          render_titles = true;
           # whether scrolling in the groupbar changes group active window
           scrolling = true;
           # controls the group bar text color
