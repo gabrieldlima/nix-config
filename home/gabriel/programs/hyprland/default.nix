@@ -371,7 +371,7 @@
         # If true, will make keyboard-interactive layers keep their focus on mouse move (e.g. wofi, bemenu)
         layers_hog_keyboard_focus = true;
         # If true, will animate manual window resizes/moves
-        animate_manual_resizes = true;
+        animate_manual_resizes = false;
         # If true, will animate windows being dragged by mouse, note that this can cause weird behavior on some curves
         animate_mouse_windowdragging = false;
         # If true, the config will not reload automatically on save, and instead needs to be reloaded with hyprctl reload. Might save on battery.
