@@ -4,6 +4,7 @@
 }: {
   imports = [
     # ./awesome.nix
+    # ./waybar.nix
     # ./xmonad
     # ./xresources.nix
     ./alacritty.nix

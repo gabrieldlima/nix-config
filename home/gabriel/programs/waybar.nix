@@ -2,10 +2,6 @@
   pkgs,
   ...
 }: {
-  home.file."logo.png" = {
-    source = ./logo.png;
-    target = ".config/waybar/logo.png";
-  };
   programs.waybar = {
     enable = true;
 
