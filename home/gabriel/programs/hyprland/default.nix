@@ -111,7 +111,7 @@
       ###############################################################################
       decoration = {
         # rounded corners’ radius (in layout px)
-        rounding = 5;
+        rounding = 0;
         # opacity of active windows. (0.0 - 1.0)
         active_opacity = 1.0;
         # opacity of inactive windows. (0.0 - 1.0)
@@ -121,7 +121,7 @@
         # enable drop shadows on windows
         drop_shadow = true;
         # Shadow range (“size”) in layout px
-        shadow_range = 4;
+        shadow_range = 10;
         # (1 - 4), in what power to render the falloff (more power, the faster the falloff)
         shadow_render_power = 3;
         # if true, the shadow will not be rendered behind the window itself, only around it
@@ -140,6 +140,8 @@
         dim_special = 0.2;
         # how much the dimaround window rule should dim by. 0.0 - 1.0
         dim_around = 0.4;
+        # a path to a custom shader to be applied at the end of rendering
+        screen_shader = "";
 
         blur = {
           # enable kawase window background blur
@@ -166,6 +168,10 @@
           vibrancy_darkness = 0;
           # whether to blur behind the special workspace (note: expensive)
           special = false;
+          # whether to blur popups (e.g. right-click menus)
+          popups = false;
+          # works like ignorealpha in layer rules. If pixel opacity is below set value, will not blur
+          popups_ignorealpha = 0.2;
         };
       };
 
