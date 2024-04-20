@@ -12,6 +12,7 @@
     ./bash.nix
     ./bat.nix
     ./dunst.nix
+    ./eww
     ./eza.nix
     ./firefox.nix
     ./fish.nix

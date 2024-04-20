@@ -31,6 +31,7 @@
       ###############################################################################
       # will execute only on launch
       exec-once = [
+        "eww open bar"
         "swww init"
         "openrgb -d 0 -m off"
         "openrgb -d 1 -m off"

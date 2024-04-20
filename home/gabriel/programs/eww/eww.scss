@@ -1,0 +1,44 @@
+* {
+  all: unset;
+}
+
+.bar {
+  font-family: "Vanilla Caramel";
+  font-size: 15;
+  color: #cdd6f4;
+  background-color: #050508;
+  border-radius: 0px;
+}
+
+.eww {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.logo {
+  padding-right: 2px;
+}
+
+.workspaces {
+  font-family: "FiraCode Nerd Font SemBd";
+  padding: 5px;
+
+  &.current * {
+    color: #89b4fa;
+    font-size: 20;
+  }
+
+  &.occupied {
+    color: #cdd6f4;
+    font-size: 20;
+  }
+
+  &.empty {
+    color: #313244;
+    font-size: 15;
+  }
+}
+
+.title {
+  color: #cdd6f4;
+}
