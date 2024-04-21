@@ -46,6 +46,7 @@ in
       hyprland     = "https://wiki.hyprland.org/";
       reddit       = "https://www.reddit.com/";
       sicp         = "https://sarabander.github.io/sicp/html/index.xhtml#SEC_Contents";
+      els          = "https://eloquentjavascript.net/index.html";
       translate    = "https://translate.google.com/";
       twitch       = "https://www.twitch.tv/";
       twitter      = "https://twitter.com/home/";
