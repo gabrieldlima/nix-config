@@ -39,6 +39,7 @@
     gnumake
     jq
     neovim
+    nodejs_21
     obsidian
     ripgrep
     rofi-wayland
