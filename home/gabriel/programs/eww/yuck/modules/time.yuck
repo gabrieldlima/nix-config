@@ -1,3 +1,7 @@
 (defwidget time []
   (box :class "time"
-    (label :text "${time}")))
+    (label
+      :text "${time}"
+    )
+  )
+)
