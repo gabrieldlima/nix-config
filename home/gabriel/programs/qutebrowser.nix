@@ -67,6 +67,12 @@ in
         position = "bottom";
       };
 
+      content = {
+        javascript = {
+          clipboard = "access";
+        };
+      };
+
       colors = {
         completion = {
           category.bg                 = "${base}";
