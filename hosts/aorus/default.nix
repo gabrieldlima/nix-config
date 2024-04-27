@@ -104,9 +104,12 @@
   ];
 
   # Fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  ];
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    ];
+  };
 
   # Virtualisation
   virtualisation.libvirtd.enable = true;
