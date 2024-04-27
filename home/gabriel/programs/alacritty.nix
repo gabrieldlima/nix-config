@@ -6,11 +6,12 @@
     enable = true;
     settings = {
       # GENERAL
-      shell = "fish";
+      shell = "zellij";
 
       # ENV
       env = {
         TERM = "xterm-256color";
+        SHELL = "fish";
       };
 
       # WINDOW
