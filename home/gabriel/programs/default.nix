@@ -29,6 +29,7 @@
     ./wezterm.nix
     ./yazi.nix
     ./zathura.nix
+    ./zellij.nix
   ];
   home.packages = with pkgs; [
     _1password-gui
