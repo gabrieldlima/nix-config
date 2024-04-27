@@ -8,6 +8,11 @@
       # GENERAL
       shell = "fish";
 
+      # ENV
+      env = {
+        TERM = "xterm-256color";
+      };
+
       # WINDOW
       window = {
         padding.x = 10;
