@@ -33,7 +33,7 @@
           family = "FiraCode Nerd Font";
           style = "Bold Italic";
         };
-        size = 12;
+        size = 11;
       };
 
       # COLORS
