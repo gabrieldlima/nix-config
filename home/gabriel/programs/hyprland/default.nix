@@ -33,8 +33,7 @@
       exec-once = [
         "eww open bar"
         "swww init"
-        "openrgb -d 0 -m off"
-        "openrgb -d 1 -m off"
+        "openrgb -d 0 -m static -c 0000FF && openrgb -d 1 -m static -c 0000FF"
       ];
 
       ###############################################################################
