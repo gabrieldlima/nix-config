@@ -9,6 +9,7 @@
       simplified_ui = false;
       pane_frames = true;
       default_shel = "fish";
+      default_layout = "compact";
       theme = "catppuccin-mocha-dark";
       themes = {
         catppuccin-mocha-dark =  {
