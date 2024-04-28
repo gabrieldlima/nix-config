@@ -3,10 +3,10 @@
   ...
 }: {
   programs.alacritty = {
-    enable = true;
+    enable = false;
     settings = {
       # GENERAL
-      shell = "zellij";
+      shell = "fish";
 
       # ENV
       env = {

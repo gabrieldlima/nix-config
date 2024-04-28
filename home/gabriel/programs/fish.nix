@@ -8,8 +8,6 @@
       starship init fish | source
       atuin init fish | source
 
-      fish_vi_key_bindings
-
       bind \cg expand-abbr
       bind \cw backward-kill-word
     '';

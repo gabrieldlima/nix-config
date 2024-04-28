@@ -4,12 +4,12 @@
 }:
 let
   awesome = pkgs.awesome.overrideAttrs (oa: {
-    version = "e6f5c79";
+    version = "8b1f8958b46b3e75618bc822d512bb4d449a89aa";
     src = pkgs.fetchFromGitHub {
       owner = "awesomeWM";
       repo = "awesome";
-      rev = "e6f5c79";
-      hash = "sha256-afviu5b86JDWd5F12Ag81JPTu9qbXi3fAlBp9tv58fI=";
+      rev = "8b1f8958b46b3e75618bc822d512bb4d449a89aa";
+      hash = "sha256-ZGZ53IWfQfNU8q/hKexFpb/2mJyqtK5M9t9HrXoEJCg=";
     };
 
     patches = [ ];
@@ -20,7 +20,7 @@ let
   });
 in {
   xsession.windowManager.awesome = {
-    enable = false;
+    enable = true;
     package = awesome;
   };
 }
