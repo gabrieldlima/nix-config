@@ -10,6 +10,7 @@
       pane_frames = true;
       default_shel = "fish";
       default_layout = "compact";
+      default_mode = "normal";
       theme = "catppuccin-mocha-dark";
       themes = {
         catppuccin-mocha-dark =  {
