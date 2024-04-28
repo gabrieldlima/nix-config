@@ -11,6 +11,13 @@
       default_shel = "fish";
       default_layout = "compact";
       default_mode = "normal";
+      mouse_mode = false;
+      ui = {
+        pane_frames = {
+          rounded_corners = false;
+          hide_session_name = true;
+        };
+      };
       theme = "catppuccin-mocha-dark";
       themes = {
         catppuccin-mocha-dark =  {
