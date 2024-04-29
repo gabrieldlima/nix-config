@@ -46,6 +46,7 @@
     rofi-wayland
     scrot
     sxiv
+    gnome.gnome-themes-extra
     tldr
     unzip
     wget
