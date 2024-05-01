@@ -38,15 +38,16 @@
     fd
     file
     gimp
+    gnome.gnome-themes-extra
     gnumake
     jq
     neovim
     obsidian
+    pavucontrol
     ripgrep
     rofi-wayland
     scrot
     sxiv
-    gnome.gnome-themes-extra
     tldr
     unzip
     wget
