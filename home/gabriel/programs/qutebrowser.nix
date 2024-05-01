@@ -164,17 +164,25 @@ in
         };
 
         tabs = {
-          bar.bg           = "${crust}";
-          even.bg          = "${crust}";
-          odd.bg           = "${crust}";
-          even.fg          = "${text}";
-          odd.fg           = "${text}";
-          indicator.error  = "${red}";
-          indicator.system = "none";
-          selected.even.bg = "${blue}";
-          selected.odd.bg  = "${blue}";
-          selected.even.fg = "${crust}";
-          selected.odd.fg  = "${crust}";
+          bar.bg                    = "${crust}";
+          even.bg                   = "${crust}";
+          odd.bg                    = "${crust}";
+          even.fg                   = "${text}";
+          odd.fg                    = "${text}";
+          indicator.error           = "${red}";
+          indicator.system          = "none";
+          selected.even.bg          = "${blue}";
+          selected.odd.bg           = "${blue}";
+          selected.even.fg          = "${crust}";
+          selected.odd.fg           = "${crust}";
+          pinned.even.bg            = "${crust}";
+          pinned.even.fg            = "${text}";
+          pinned.odd.bg             = "${crust}";
+          pinned.odd.fg             = "${text}";
+          pinned.selected.odd.bg    = "${blue}";
+          pinned.selected.odd.fg    = "${crust}";
+          pinned.selected.even.bg   = "${blue}";
+          pinned.selected.even.fg   = "${crust}";
         };
 
         contextmenu = {
