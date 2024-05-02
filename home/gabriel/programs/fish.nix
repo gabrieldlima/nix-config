@@ -47,6 +47,7 @@
       # Nix commands
       nr = "nix run nixpkgs#";
       ns = "nix shell nixpkgs#";
+      nd = "nix develop";
       ncg = "nix-collect-garbage --delete-old";
       nrs = "sudo nixos-rebuild switch --flake";
 
