@@ -22,6 +22,7 @@
     ./git.nix
     ./kitty.nix
     ./mangohud.nix
+    ./mpv.nix
     ./picom.nix
     ./qutebrowser.nix
     ./starship.nix
