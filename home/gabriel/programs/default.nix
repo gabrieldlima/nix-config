@@ -7,7 +7,6 @@
     # ./eww
     # ./foot.nix
     # ./hyprland
-    # ./steam.nix
     # ./waybar.nix
     # ./xmonad
     ./alacritty.nix
@@ -26,6 +25,7 @@
     ./picom.nix
     ./qutebrowser.nix
     ./starship.nix
+    ./steam.nix
     ./tmux.nix
     ./wezterm.nix
     ./xresources.nix
