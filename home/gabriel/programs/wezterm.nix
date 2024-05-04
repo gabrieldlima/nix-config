@@ -42,7 +42,7 @@
     extraConfig = ''
       return {
         color_scheme = "catppuccinMocha",
-        window_background_opacity = 1,
+        window_background_opacity = 0.95,
         default_prog = { 'fish' },
         font = wezterm.font 'FiraCode Nerd Font',
         font_size = 11.0,
