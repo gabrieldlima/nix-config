@@ -3,35 +3,58 @@
   ...
 }: {
   imports = [
-    # ./dunst.nix
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    # Wayland
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    ./dunst.nix
     # ./eww
-    # ./foot.nix
-    # ./hyprland
+    ./hyprland
     # ./waybar.nix
+
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    # Xorg
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    # ./awesome.nix
+    # ./picom.nix
     # ./xmonad
+    # ./xresources.nix
+
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    # Terminal emulators
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     ./alacritty.nix
+    ./foot.nix
+    ./kitty.nix
+    ./wezterm.nix
+
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    # Web browsers
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    ./firefox.nix
+    ./qutebrowser.nix
+
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    # Command-line
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     ./atuin.nix
-    ./awesome.nix
     ./bash.nix
     ./bat.nix
     ./eza.nix
-    ./firefox.nix
     ./fish.nix
     ./fzf.nix
     ./git.nix
-    ./kitty.nix
+    ./starship.nix
+    ./tmux.nix
+    ./yazi.nix
+    ./zellij.nix
+
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    # Misc
+    # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     ./mangohud.nix
     ./mpv.nix
-    ./picom.nix
-    ./qutebrowser.nix
-    ./starship.nix
     ./steam.nix
-    ./tmux.nix
-    ./wezterm.nix
-    ./xresources.nix
-    ./yazi.nix
     ./zathura.nix
-    ./zellij.nix
   ];
   home.packages = with pkgs; [
     _1password-gui
@@ -46,13 +69,9 @@
     obsidian
     pavucontrol
     ripgrep
-    rofi-wayland
-    scrot
-    sxiv
+    virtiofsd
     tldr
     unzip
     wget
-    xsel
-    xwallpaper
   ];
 }

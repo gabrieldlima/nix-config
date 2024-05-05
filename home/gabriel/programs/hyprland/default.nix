@@ -18,6 +18,7 @@
   # Hyprland specific deps
   home.packages = with pkgs; [
     hyprpicker
+    rofi-wayland
     socat
     swww
     xdg-desktop-portal-hyprland
@@ -31,7 +32,6 @@
       ###############################################################################
       # will execute only on launch
       exec-once = [
-        "eww open bar"
         "swww init"
         "openrgb -d 0 -m static -c 0000FF && openrgb -d 1 -m static -c 0000FF"
       ];

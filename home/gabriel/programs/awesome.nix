@@ -23,4 +23,11 @@ in {
     enable = true;
     package = awesome;
   };
+
+  home.packages = with pkgs; [
+    scrot
+    sxiv
+    xsel
+    xwallpaper
+  ];
 }
