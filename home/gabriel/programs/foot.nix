@@ -3,7 +3,7 @@
   ...
 }: {
   programs.foot = {
-    enable = true;
+    enable = false;
     server = {
       enable = false;
     };
