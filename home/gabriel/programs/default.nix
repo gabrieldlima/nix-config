@@ -53,7 +53,7 @@
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     ./mangohud.nix
     ./mpv.nix
-    ./steam.nix
+    # ./steam.nix
     ./zathura.nix
   ];
   home.packages = with pkgs; [
