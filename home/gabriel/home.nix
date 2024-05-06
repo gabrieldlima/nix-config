@@ -40,6 +40,25 @@
     };
   };
 
+  xdg = {
+    # NOTE: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+    enable = true;
+
+    # $XDG_CACHE_HOME: Absolute path to directory holding application caches
+    cacheHome = "${config.home.homeDirectory}/.cache";
+
+    # $XDG_CONFIG_HOME: Absolute path to directory holding application configurations
+    configHome = "${config.home.homeDirectory}/.config";
+
+    # $XDG_DATA_HOME: Absolute path to directory holding application data
+    dataHome = "${config.home.homeDirectory}/.local/share";
+
+    # $XDG_STATE_HOME: Absolute path to directory holding application states
+    stateHome = "${config.home.homeDirectory}/.local/state";
+
+    userDirs.createDirectories = true;
+  };
+
   gtk = {
     enable = true;
     theme = {
