@@ -32,6 +32,7 @@
       ###############################################################################
       # will execute only on launch
       exec-once = [
+        "ags -c ~/.config/ags/config.js"
         "swww init"
         "openrgb -d 0 -m static -c 0000FF && openrgb -d 1 -m static -c 0000FF"
       ];
