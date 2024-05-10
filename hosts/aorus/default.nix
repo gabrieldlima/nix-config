@@ -38,8 +38,8 @@
       # Deduplicate and optimize nix store
       auto-optimise-store = true;
 
-      substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+      # substituters = ["https://hyprland.cachix.org"];
+      # trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
   };
 
@@ -69,12 +69,12 @@
 
   # Enable the X11 windowing system
   services.xserver = {
-    enable = false;
+    enable = true;
     videoDrivers = [ "amdgpu" ];
     displayManager = {
-      startx.enable = false;
+      startx.enable = true;
     };
-    wacom.enable = false;
+    wacom.enable = true;
   };
 
   hardware.opengl = {
@@ -82,7 +82,7 @@
     driSupport = true;
     driSupport32Bit = true;
   };
-  hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver.enable = false;
 
   # Enable the Pulseaudio sound server
   sound.enable = true;
