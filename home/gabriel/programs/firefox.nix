@@ -28,12 +28,12 @@
         "Locked" = false;
       };
     };
-    profiles = {
-      gabriel = {
-        search = {
-          default = "DuckDuckGo";
-        };
-      };
-    };
+    # profiles = {
+    #   gabriel = {
+    #     search = {
+    #       default = "DuckDuckGo";
+    #     };
+    #   };
+    # };
   };
 }
