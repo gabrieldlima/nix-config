@@ -3,13 +3,13 @@
   ...
 }: {
   programs.firefox = {
-    enable = false;
+    enable = true;
     enableGnomeExtensions = false;
     package = pkgs.firefox;
     policies = {
       DefaultDownloadDirectory = "\${home}/Downloads";
       DisableBuiltinPDFViewer = true;
-      DisableFirefoxAccounts = true;
+      DisableFirefoxAccounts = false;
       DisablePasswordReveal = true;
       DisablePocket = true;
       DisableProfileImport = true;
