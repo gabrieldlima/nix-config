@@ -22,7 +22,7 @@
     };
 
     # Variables
-    "$browser" = "qutebrowser";
+    "$browser" = "firefox";
     "$launcher" = "rofi -show drun";
     "$terminal" = "kitty";
 
