@@ -32,7 +32,7 @@ let
 in
 {
   programs.qutebrowser = {
-    enable = true;
+    enable = false;
 
     quickmarks = {
       awesomewm    = "https://awesomewm.org/apidoc";
