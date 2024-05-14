@@ -15,7 +15,7 @@
     # Xorg
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     ./awesome.nix
-    ./dunst.nix
+    # ./dunst.nix
     ./picom.nix
     # ./xmonad
     ./xresources.nix
@@ -54,7 +54,7 @@
     # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     ./mangohud.nix
     ./mpv.nix
-    # ./steam.nix
+    ./steam.nix
     ./zathura.nix
   ];
   home.packages = with pkgs; [
