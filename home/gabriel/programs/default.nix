@@ -67,12 +67,13 @@
     gnumake
     jq
     neovim
+    nixd
     obsidian
     pavucontrol
     ripgrep
-    virtiofsd
     tldr
     unzip
+    virtiofsd
     wget
   ];
 }
