@@ -57,6 +57,15 @@
     stateHome = "${config.home.homeDirectory}/.local/state";
 
     userDirs.createDirectories = true;
+
+    mime.enable = true;
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "image/png" = [ "sxiv.desktop" ];
+        "image/jpg" = [ "sxiv.desktop" ];
+      };
+    };
   };
 
   gtk = {
